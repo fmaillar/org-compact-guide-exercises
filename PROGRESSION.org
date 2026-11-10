@@ -1,0 +1,348 @@
+#+TITLE: Progression dans le Org Mode Compact Guide
+#+LANGUAGE: fr
+#+TODO: TODO(t) INPROGRESS(i) | DONE(d)
+#+STARTUP: overview
+
+Chaque ligne [ ] correspond à un exercice. Faire C-c C-c sur une case
+validée, puis déclarer le chapitre DONE lorsqu’il est maîtrisé.
+Le suivi ne modifie aucun énoncé et peut être conservé entre les sessions.
+
+* TODO 01 — Introduction
+  Exercices : [[file:exercices/01-introduction.org][énoncés]] ; [[file:ateliers/01-introduction.org][atelier]].
+
+** 1 · Installation — Installation et version [0/3]
+- [ ] E01-01-A
+- [ ] E01-01-B
+- [ ] E01-01-C
+
+** 1 · Activation — Activation et commandes globales [0/3]
+- [ ] E01-02-A
+- [ ] E01-02-B
+- [ ] E01-02-C
+
+** 1 · Feedback — Documentation et retours [0/2]
+- [ ] E01-03-A
+- [ ] E01-03-B
+
+* TODO 02 — Document Structure
+  Exercices : [[file:exercices/02-document-structure.org][énoncés]] ; [[file:ateliers/02-document-structure.org][atelier]].
+
+** 2.1 — Headlines [0/2]
+- [ ] E02-01-A
+- [ ] E02-01-B
+
+** 2.2 — Visibility Cycling [0/2]
+- [ ] E02-02-A
+- [ ] E02-02-B
+
+** 2.3 — Motion [0/2]
+- [ ] E02-03-A
+- [ ] E02-03-B
+
+** 2.4 — Structure Editing [0/3]
+- [ ] E02-04-A
+- [ ] E02-04-B
+- [ ] E02-04-C
+
+** 2.5 — Sparse Trees [0/2]
+- [ ] E02-05-A
+- [ ] E02-05-B
+
+** 2.6 — Plain Lists [0/3]
+- [ ] E02-06-A
+- [ ] E02-06-B
+- [ ] E02-06-C
+
+* TODO 03 — Tables
+  Exercices : [[file:exercices/03-tables.org][énoncés]] ; [[file:ateliers/03-tables.org][atelier]].
+
+** 3 · Création — Création et conversion [0/3]
+- [ ] E03-01-A
+- [ ] E03-01-B
+- [ ] E03-01-C
+
+** 3 · Alignement — Alignement et déplacement des champs [0/2]
+- [ ] E03-02-A
+- [ ] E03-02-B
+
+** 3 · Édition — Colonnes, lignes et tri [0/3]
+- [ ] E03-03-A
+- [ ] E03-03-B
+- [ ] E03-03-C
+
+* TODO 04 — Hyperlinks
+  Exercices : [[file:exercices/04-hyperlinks.org][énoncés]] ; [[file:ateliers/04-hyperlinks.org][atelier]].
+
+** 4 · Internes — Liens internes [0/2]
+- [ ] E04-01-A
+- [ ] E04-01-B
+
+** 4 · Externes — Liens externes et protocoles [0/2]
+- [ ] E04-02-A
+- [ ] E04-02-B
+
+** 4 · Manipulation — Création et suivi des liens [0/2]
+- [ ] E04-03-A
+- [ ] E04-03-B
+
+* TODO 05 — TODO Items
+  Exercices : [[file:exercices/05-todo-items.org][énoncés]] ; [[file:ateliers/05-todo-items.org][atelier]].
+
+** 5.1 — Basic TODO Functionality [0/3]
+- [ ] E05-01-A
+- [ ] E05-01-B
+- [ ] E05-01-C
+
+** 5.2 — Multi-state Workflow [0/3]
+- [ ] E05-02-A
+- [ ] E05-02-B
+- [ ] E05-02-C
+
+** 5.3 — Progress Logging [0/3]
+- [ ] E05-03-A
+- [ ] E05-03-B
+- [ ] E05-03-C
+
+** 5.4 — Priorities [0/2]
+- [ ] E05-04-A
+- [ ] E05-04-B
+
+** 5.5 — Breaking Tasks Down into Subtasks [0/2]
+- [ ] E05-05-A
+- [ ] E05-05-B
+
+** 5.6 — Checkboxes [0/2]
+- [ ] E05-06-A
+- [ ] E05-06-B
+
+* TODO 06 — Tags
+  Exercices : [[file:exercices/06-tags.org][énoncés]] ; [[file:ateliers/06-tags.org][atelier]].
+
+** 6 · Héritage — Tags et héritage [0/2]
+- [ ] E06-01-A
+- [ ] E06-01-B
+
+** 6 · Saisie — Saisie et complétion des tags [0/2]
+- [ ] E06-02-A
+- [ ] E06-02-B
+
+** 6 · Groupes — Tags de groupe [0/2]
+- [ ] E06-03-A
+- [ ] E06-03-B
+
+** 6 · Recherche — Recherches booléennes de tags [0/2]
+- [ ] E06-04-A
+- [ ] E06-04-B
+
+* TODO 07 — Properties
+  Exercices : [[file:exercices/07-properties.org][énoncés]] ; [[file:ateliers/07-properties.org][atelier]].
+
+** 7 — Propriétés et valeurs permises [0/4]
+- [ ] E07-01-A
+- [ ] E07-01-B
+- [ ] E07-01-C
+- [ ] E07-01-D
+
+* TODO 08 — Dates and Times
+  Exercices : [[file:exercices/08-dates-and-times.org][énoncés]] ; [[file:ateliers/08-dates-and-times.org][atelier]].
+
+** 8.1 — Timestamps [0/3]
+- [ ] E08-01-A
+- [ ] E08-01-B
+- [ ] E08-01-C
+
+** 8.2 — Creating Timestamps [0/3]
+- [ ] E08-02-A
+- [ ] E08-02-B
+- [ ] E08-02-C
+
+** 8.3 — Deadlines and Scheduling [0/3]
+- [ ] E08-03-A
+- [ ] E08-03-B
+- [ ] E08-03-C
+
+** 8.4 — Clocking Work Time [0/3]
+- [ ] E08-04-A
+- [ ] E08-04-B
+- [ ] E08-04-C
+
+* TODO 09 — Capture, Refile, Archive
+  Exercices : [[file:exercices/09-capture-refile-archive.org][énoncés]] ; [[file:ateliers/09-capture-refile-archive.org][atelier]].
+
+** 9.1 — Capture [0/3]
+- [ ] E09-01-A
+- [ ] E09-01-B
+- [ ] E09-01-C
+
+** 9.2 — Refile and Copy [0/3]
+- [ ] E09-02-A
+- [ ] E09-02-B
+- [ ] E09-02-C
+
+** 9.3 — Archiving [0/3]
+- [ ] E09-03-A
+- [ ] E09-03-B
+- [ ] E09-03-C
+
+* TODO 10 — Agenda Views
+  Exercices : [[file:exercices/10-agenda-views.org][énoncés]] ; [[file:ateliers/10-agenda-views.org][atelier]].
+
+** 10.1 — Agenda Files [0/2]
+- [ ] E10-01-A
+- [ ] E10-01-B
+
+** 10.2 — The Agenda Dispatcher [0/2]
+- [ ] E10-02-A
+- [ ] E10-02-B
+
+** 10.3 — The Weekly/Daily Agenda [0/3]
+- [ ] E10-03-A
+- [ ] E10-03-B
+- [ ] E10-03-C
+
+** 10.4 — The Global TODO List [0/2]
+- [ ] E10-04-A
+- [ ] E10-04-B
+
+** 10.5 — Matching Tags and Properties [0/3]
+- [ ] E10-05-A
+- [ ] E10-05-B
+- [ ] E10-05-C
+
+** 10.6 — Search View [0/2]
+- [ ] E10-06-A
+- [ ] E10-06-B
+
+** 10.7 — Commands in the Agenda Buffer [0/5]
+- [ ] E10-07-A
+- [ ] E10-07-B
+- [ ] E10-07-C
+- [ ] E10-07-D
+- [ ] E10-07-E
+
+** 10.8 — Custom Agenda Views [0/2]
+- [ ] E10-08-A
+- [ ] E10-08-B
+
+* TODO 11 — Markup for Rich Contents
+  Exercices : [[file:exercices/11-markup-for-rich-contents.org][énoncés]] ; [[file:ateliers/11-markup-for-rich-contents.org][atelier]].
+
+** 11.1 — Paragraphs [0/2]
+- [ ] E11-01-A
+- [ ] E11-01-B
+
+** 11.2 — Emphasis and Monospace [0/2]
+- [ ] E11-02-A
+- [ ] E11-02-B
+
+** 11.3 — Embedded LaTeX [0/2]
+- [ ] E11-03-A
+- [ ] E11-03-B
+
+** 11.4 — Literal examples [0/2]
+- [ ] E11-04-A
+- [ ] E11-04-B
+
+** 11.5 — Images [0/2]
+- [ ] E11-05-A
+- [ ] E11-05-B
+
+** 11.6 — Creating Footnotes [0/2]
+- [ ] E11-06-A
+- [ ] E11-06-B
+
+* TODO 12 — Exporting
+  Exercices : [[file:exercices/12-exporting.org][énoncés]] ; [[file:ateliers/12-exporting.org][atelier]].
+
+** 12.1 — The Export Dispatcher [0/2]
+- [ ] E12-01-A
+- [ ] E12-01-B
+
+** 12.2 — Export Settings [0/2]
+- [ ] E12-02-A
+- [ ] E12-02-B
+
+** 12.3 — Table of Contents [0/2]
+- [ ] E12-03-A
+- [ ] E12-03-B
+
+** 12.4 — Include Files [0/2]
+- [ ] E12-04-A
+- [ ] E12-04-B
+
+** 12.5 — Comment Lines [0/2]
+- [ ] E12-05-A
+- [ ] E12-05-B
+
+** 12.6 — ASCII/UTF-8 Export [0/2]
+- [ ] E12-06-A
+- [ ] E12-06-B
+
+** 12.7 — HTML Export [0/2]
+- [ ] E12-07-A
+- [ ] E12-07-B
+
+** 12.8 — LaTeX Export [0/3]
+- [ ] E12-08-A
+- [ ] E12-08-B
+- [ ] E12-08-C
+
+** 12.9 — iCalendar Export [0/2]
+- [ ] E12-09-A
+- [ ] E12-09-B
+
+* TODO 13 — Publishing
+  Exercices : [[file:exercices/13-publishing.org][énoncés]] ; [[file:ateliers/13-publishing.org][atelier]].
+
+** 13 · Projet — Configuration d’un projet de publication [0/4]
+- [ ] E13-01-A
+- [ ] E13-01-B
+- [ ] E13-01-C
+- [ ] E13-01-D
+
+** 13 · Commandes — Publication incrémentale et forcée [0/2]
+- [ ] E13-02-A
+- [ ] E13-02-B
+
+* TODO 14 — Working with Source Code
+  Exercices : [[file:exercices/14-working-with-source-code.org][énoncés]] ; [[file:ateliers/14-working-with-source-code.org][atelier]].
+
+** 14 · Blocs — Structure d’un bloc et édition [0/2]
+- [ ] E14-01-A
+- [ ] E14-01-B
+
+** 14 · Arguments — Arguments d’en-tête et portée [0/2]
+- [ ] E14-02-A
+- [ ] E14-02-B
+
+** 14 · Évaluation — Évaluation et transmission de données [0/2]
+- [ ] E14-03-A
+- [ ] E14-03-B
+
+** 14 · Résultats — Collecte, type, format et export [0/4]
+- [ ] E14-04-A
+- [ ] E14-04-B
+- [ ] E14-04-C
+- [ ] E14-04-D
+
+** 14 · Tangling — Extraction de code source [0/2]
+- [ ] E14-05-A
+- [ ] E14-05-B
+
+* TODO 15 — Miscellaneous
+  Exercices : [[file:exercices/15-miscellaneous.org][énoncés]] ; [[file:ateliers/15-miscellaneous.org][atelier]].
+
+** 15 · Complétion — Complétion contextuelle [0/2]
+- [ ] E15-01-A
+- [ ] E15-01-B
+
+** 15 · Templates — Modèles de structure [0/2]
+- [ ] E15-02-A
+- [ ] E15-02-B
+
+** 15 · Vue — Vue indente et présentation des étoiles [0/2]
+- [ ] E15-03-A
+- [ ] E15-03-B
+
+* Notes et difficultés
+Inscrire les comportements propres à votre version Org et les commandes utiles.

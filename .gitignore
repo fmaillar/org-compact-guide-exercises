@@ -1,0 +1,25 @@
+# Fichiers temporaires Emacs
+*~
+\#*\#
+.#*
+.org-id-locations
+*.org_archive
+*.org_archive~
+# Exports du parcours
+/exports/**
+!/exports/.gitkeep
+/ateliers/**/*.html
+/ateliers/**/*.tex
+/ateliers/**/*.pdf
+/ateliers/**/*.txt
+/ateliers/**/*.ics
+/ateliers/**/*.org_archive
+/ateliers/*.html
+/ateliers/*.tex
+/ateliers/*.pdf
+/ateliers/*.txt
+/ateliers/*.ics
+# Artefacts Python
+__pycache__/
+*.pyc
+.pytest_cache/
