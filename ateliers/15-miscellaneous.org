@@ -1,0 +1,12 @@
+#+TITLE: Atelier 15 — Miscellaneous
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+TAGS: test(t) documentation(d) emacs(e)
+* TODO Exemple de complétion
+* Exemple de blocs à insérer
+Insérer un bloc EXAMPLE et un bloc QUOTE dans cette rubrique.
+* Sous-arbre pour indent-mode
+** Sous-titre
+*** Note profonde
+Comparer la structure et son rendu sans déplacer le texte de niveau.

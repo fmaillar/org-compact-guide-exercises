@@ -1,0 +1,74 @@
+#+TITLE: 06 — Tags · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 6
+Énoncés : [[file:../exercices/06-tags.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 6 · Héritage — Tags et héritage
+Commande(s) de référence : =:travail: ; #+FILETAGS:=
+
+*** E06-01-A — Résultat attendu
+- Critère :: L’enfant hérite de :travail: sans devoir le répéter dans son titre.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E06-01-B — Résultat attendu
+- Critère :: Les entrées héritent du tag de fichier en plus des tags de branche.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 6 · Saisie — Saisie et complétion des tags
+Commande(s) de référence : =C-c C-q ; C-c C-c ; M-TAB ; #+TAGS ; org-tag-alist=
+
+*** E06-02-A — Résultat attendu
+- Critère :: La sélection rapide propose les clés et n’introduit pas de doublons.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E06-02-B — Résultat attendu
+- Critère :: Les tags sont à la fin du titre, encadrés par : et correctement espacés.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 6 · Groupes — Tags de groupe
+Commande(s) de référence : =#+TAGS [ ] ; #+TAGS { } ; C-c C-x q=
+
+*** E06-03-A — Résultat attendu
+- Critère :: Une recherche Contexte remonte les éléments marqués par les membres du groupe.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E06-03-B — Résultat attendu
+- Critère :: L’effet des accolades et de C-c C-x q est observé sur les résultats.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 6 · Recherche — Recherches booléennes de tags
+Commande(s) de référence : =C-c / m ; C-c \ ; M-x org-agenda m/M=
+
+*** E06-04-A — Résultat attendu
+- Critère :: Seules les rubriques satisfaisant la conjonction et l’exclusion sont retenues.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E06-04-B — Résultat attendu
+- Critère :: La restriction aux TODO et le | changent le périmètre des résultats.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+TAGS: [ Contexte : @bureau @maison ]
+#+TAGS: { Lieu : @bureau @maison }
+* Projet :travail:
+** TODO Étape :urgent:@bureau:
+
+# Recherche : +travail+urgent-personnel
+# Grouper ou non : C-c C-x q
+#+END_EXAMPLE

@@ -1,0 +1,107 @@
+#+TITLE: 14 — Working with Source Code · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 14
+Énoncés : [[file:../exercices/14-working-with-source-code.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 14 · Blocs — Structure d’un bloc et édition
+Commande(s) de référence : =#+NAME ; #+BEGIN_SRC langage ; #+END_SRC ; C-c '=
+
+*** E14-01-A — Résultat attendu
+- Critère :: Le bloc est correctement délimité ; l’édition spécialisée ne casse pas le document.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-01-B — Résultat attendu
+- Critère :: Le choix de langage et la politique d’exécution sont explicites.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 14 · Arguments — Arguments d’en-tête et portée
+Commande(s) de référence : =:results ; :exports ; :var ; #+HEADER ; :PROPERTIES: :header-args:=
+
+*** E14-02-A — Résultat attendu
+- Critère :: Le résultat du bloc dépend de la variable fournie et les arguments locaux sont prioritaires.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-02-B — Résultat attendu
+- Critère :: La différence entre configuration globale, propriétés de sous-arbre et arguments du bloc est observable.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 14 · Évaluation — Évaluation et transmission de données
+Commande(s) de référence : =C-c C-c ; org-babel ; :var ; #+RESULTS=
+
+*** E14-03-A — Résultat attendu
+- Critère :: Le calcul arithmétique donne la valeur attendue sans accès au réseau ni au système de fichiers.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-03-B — Résultat attendu
+- Critère :: Les entrées passent par :var et la sortie dépend des données transmises.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 14 · Résultats — Collecte, type, format et export
+Commande(s) de référence : =:results value/output/table/list/scalar/file ; replace/append/silent ; :exports code/results/both/none=
+
+*** E14-04-A — Résultat attendu
+- Critère :: Le premier recueille la valeur de retour, le second la sortie imprimée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-04-B — Résultat attendu
+- Critère :: Le type/format et la politique de remplacement sont contrôlés.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-04-C — Résultat attendu
+- Critère :: Un fichier de résultat est créé uniquement dans le dossier de sortie attendu et référencé depuis Org.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-04-D — Résultat attendu
+- Critère :: Les quatre variantes de :exports sont constatées dans le HTML généré.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 14 · Tangling — Extraction de code source
+Commande(s) de référence : =:tangle exports/calcul.py ; C-c C-v t ; noweb=
+
+*** E14-05-A — Résultat attendu
+- Critère :: Le fichier Python apparaît à la destination définie sans exécution automatique.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E14-05-B — Résultat attendu
+- Critère :: Le code expansé est cohérent et portable ; aucune commande externe dangereuse n’est lancée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+NAME: carre
+#+BEGIN_SRC emacs-lisp :var n=7 :results value :exports both
+(* n n)
+#+END_SRC
+#+RESULTS: carre
+: 49
+
+#+BEGIN_SRC emacs-lisp :results output
+(princ "bonjour")
+#+END_SRC
+#+RESULTS:
+: bonjour
+
+#+BEGIN_SRC python :eval never :tangle ../exports/calcul.py
+def aire_disque(rayon: float) -> float:
+    return 3.141592653589793 * rayon ** 2
+#+END_SRC
+#+END_EXAMPLE

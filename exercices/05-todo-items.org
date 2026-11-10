@@ -1,0 +1,109 @@
+#+TITLE: 05 — TODO Items · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 5
+
+* 5 — TODO Items
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/05-todo-items.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/05-todo-items.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 5.1 — Basic TODO Functionality
+Raccourcis et notions : =C-c C-t ; S-LEFT/RIGHT ; C-c / t ; M-S-RET=
+
+*** E05-01-A — Exercice pratique
+- Consigne :: Transformer trois rubriques en TODO/DONE à l’aide de C-c C-t et S-flèches.
+- Validation :: Les changements ont lieu sur les titres et les éléments DONE disparaissent de la recherche TODO ouverte.
+- Suivi :: Cocher E05-01-A dans le fichier PROGRESSION.org.
+
+*** E05-01-B — Exercice pratique
+- Consigne :: Afficher un arbre des TODO ouverts et insérer une nouvelle tâche depuis un titre.
+- Validation :: C-c / t sélectionne les tâches non terminées et M-S-RET insère un titre TODO.
+- Suivi :: Cocher E05-01-B dans le fichier PROGRESSION.org.
+
+*** E05-01-C — Exercice pratique
+- Consigne :: Tester M-x org-agenda t après avoir enregistré les fichiers d’agenda.
+- Validation :: La vue consolide les TODO ouverts de plusieurs fichiers.
+- Suivi :: Cocher E05-01-C dans le fichier PROGRESSION.org.
+
+** 5.2 — Multi-state Workflow
+Raccourcis et notions : =#+TODO ; C-c C-c sur la ligne de configuration ; C-c C-t=
+
+*** E05-02-A — Exercice pratique
+- Consigne :: Configurer un flux TODO → WAIT → REVIEW | DONE → CANCELED avec touches d’accès rapide.
+- Validation :: Les états à gauche de | sont ouverts ; DONE/CANCELED sont fermés et les touches sélectionnent les états.
+- Suivi :: Cocher E05-02-A dans le fichier PROGRESSION.org.
+
+*** E05-02-B — Exercice pratique
+- Consigne :: Ajouter une seconde séquence REPORT → BUG → FIXED à l’échelle du fichier.
+- Validation :: Chaque rubrique appartient à une séquence explicite et C-c C-c recharge les mots-clés.
+- Suivi :: Cocher E05-02-B dans le fichier PROGRESSION.org.
+
+*** E05-02-C — Exercice pratique
+- Consigne :: Comparer les réglages locaux #+TODO et la variable globale org-todo-keywords.
+- Validation :: Le périmètre de chaque méthode est correctement distingué.
+- Suivi :: Cocher E05-02-C dans le fichier PROGRESSION.org.
+
+** 5.3 — Progress Logging
+Raccourcis et notions : =C-u C-c C-t ; org-log-done ; org-log-into-drawer ; état !/@=
+
+*** E05-03-A — Exercice pratique
+- Consigne :: Terminer une tâche avec journalisation et contrôler le champ CLOSED ou la note de fermeture.
+- Validation :: Un événement de fin horodaté est enregistré uniquement si configuré.
+- Suivi :: Cocher E05-03-A dans le fichier PROGRESSION.org.
+
+*** E05-03-B — Exercice pratique
+- Consigne :: Configurer WAIT(w@) et DONE(d!) puis déclencher chacun des deux états.
+- Validation :: WAIT demande une note ; DONE trace un horodatage ; les événements sont dans LOGBOOK si activé.
+- Suivi :: Cocher E05-03-B dans le fichier PROGRESSION.org.
+
+*** E05-03-C — Exercice pratique
+- Consigne :: Essayer C-u C-c C-t pour une transition accompagnée d’un commentaire.
+- Validation :: La transition est documentée et sa date dépend de l’exécution réelle.
+- Suivi :: Cocher E05-03-C dans le fichier PROGRESSION.org.
+
+** 5.4 — Priorities
+Raccourcis et notions : =C-c , ; S-UP/DOWN=
+
+*** E05-04-A — Exercice pratique
+- Consigne :: Affecter les priorités A, B, C et supprimer la priorité d’une tâche.
+- Validation :: Les cookies [#A], [#B], [#C] sont syntaxiquement corrects, absence de cookie = priorité B par défaut.
+- Suivi :: Cocher E05-04-A dans le fichier PROGRESSION.org.
+
+*** E05-04-B — Exercice pratique
+- Consigne :: Afficher une vue agenda/TODO et constater l’effet des priorités sur la présentation.
+- Validation :: La priorité influe sur l’agenda, non sur l’état de réalisation.
+- Suivi :: Cocher E05-04-B dans le fichier PROGRESSION.org.
+
+** 5.5 — Breaking Tasks Down into Subtasks
+Raccourcis et notions : =[/] ; [%] ; C-c C-c=
+
+*** E05-05-A — Exercice pratique
+- Consigne :: Créer un projet parent avec quatre sous-tâches TODO ; ajouter les compteurs [/] et [%].
+- Validation :: Les compteurs reflètent exactement le nombre et le pourcentage de sous-tâches terminées.
+- Suivi :: Cocher E05-05-A dans le fichier PROGRESSION.org.
+
+*** E05-05-B — Exercice pratique
+- Consigne :: Marquer deux tâches DONE, puis recalculer un compteur via C-c C-c.
+- Validation :: Le résultat est 2/4 et 50 % (si les quatre enfants directs sont les tâches comptées).
+- Suivi :: Cocher E05-05-B dans le fichier PROGRESSION.org.
+
+** 5.6 — Checkboxes
+Raccourcis et notions : =- [ ] ; - [X] ; - [-] ; C-c C-c ; C-u C-c C-c=
+
+*** E05-06-A — Exercice pratique
+- Consigne :: Construire une liste de contrôle à deux niveaux avec trois cases filles et une case mère.
+- Validation :: Avec une partie des filles cochées, la mère est intermédiaire [-].
+- Suivi :: Cocher E05-06-A dans le fichier PROGRESSION.org.
+
+*** E05-06-B — Exercice pratique
+- Consigne :: Ajouter [/] ou [%] au parent, cocher toutes les cases puis supprimer une case via argument préfixe.
+- Validation :: Le compteur se met à jour et les checkboxes ne figurent pas dans la liste globale des TODO.
+- Suivi :: Cocher E05-06-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

@@ -1,0 +1,61 @@
+#+TITLE: 15 — Miscellaneous · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 15
+Énoncés : [[file:../exercices/15-miscellaneous.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 15 · Complétion — Complétion contextuelle
+Commande(s) de référence : =M-TAB ; TODO ; :tag: ; \alpha=
+
+*** E15-01-A — Résultat attendu
+- Critère :: La complétion dépend du contexte ; si M-TAB est intercepté, utiliser M-x completion-at-point.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E15-01-B — Résultat attendu
+- Critère :: L’absence de proposition n’est pas interprétée comme une corruption du fichier.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 15 · Templates — Modèles de structure
+Commande(s) de référence : =C-c C-, ; region active=
+
+*** E15-02-A — Résultat attendu
+- Critère :: Les délimiteurs ouvrants et fermants sont correctement appariés.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E15-02-B — Résultat attendu
+- Critère :: Tout le texte est dans le bloc, sans perte de contenu.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 15 · Vue — Vue indente et présentation des étoiles
+Commande(s) de référence : =M-x org-indent-mode ; #+STARTUP: indent ; hidestars odd=
+
+*** E15-03-A — Résultat attendu
+- Critère :: L’option dynamique n’insère pas d’espaces matériels dans les lignes du fichier.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E15-03-B — Résultat attendu
+- Critère :: Le rendu et les octets du fichier sont distingués ; l’option de démarrage est locale.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+STARTUP: indent
+* Niveau 1
+** Niveau 2
+*** Niveau 3
+
+# C-c C-, insère un bloc de structure.
+# org-indent-mode change l’affichage, pas la hiérarchie réelle.
+#+END_EXAMPLE

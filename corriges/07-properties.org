@@ -1,0 +1,48 @@
+#+TITLE: 07 — Properties · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 7
+Énoncés : [[file:../exercices/07-properties.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 7 — Propriétés et valeurs permises
+Commande(s) de référence : =:PROPERTIES: ; :END: ; _ALL ; #+PROPERTY ; C-c C-x p ; C-c C-c d=
+
+*** E07-01-A — Résultat attendu
+- Critère :: Chaque propriété est dans un drawer PROPERTIES fermé par :END:.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E07-01-B — Résultat attendu
+- Critère :: Les valeurs permises sont héritées, mais la propriété ordinaire ne devient pas automatiquement définie.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E07-01-C — Résultat attendu
+- Critère :: Le périmètre du réglage est explicite ; C-c C-x p sait mettre à jour la propriété.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E07-01-D — Résultat attendu
+- Critère :: C-c C-c d retire la propriété voulue ; les recherches ne sélectionnent plus la valeur retirée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+PROPERTY: Statut_ALL planifie mesure valide
+* Projet
+:PROPERTIES:
+:Responsable: Ada
+:END:
+** Essai 001
+:PROPERTIES:
+:Statut: planifie
+:Tension: 0.79
+:END:
+#+END_EXAMPLE

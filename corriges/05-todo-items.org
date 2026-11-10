@@ -1,0 +1,117 @@
+#+TITLE: 05 — TODO Items · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 5
+Énoncés : [[file:../exercices/05-todo-items.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 5.1 — Basic TODO Functionality
+Commande(s) de référence : =C-c C-t ; S-LEFT/RIGHT ; C-c / t ; M-S-RET=
+
+*** E05-01-A — Résultat attendu
+- Critère :: Les changements ont lieu sur les titres et les éléments DONE disparaissent de la recherche TODO ouverte.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-01-B — Résultat attendu
+- Critère :: C-c / t sélectionne les tâches non terminées et M-S-RET insère un titre TODO.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-01-C — Résultat attendu
+- Critère :: La vue consolide les TODO ouverts de plusieurs fichiers.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 5.2 — Multi-state Workflow
+Commande(s) de référence : =#+TODO ; C-c C-c sur la ligne de configuration ; C-c C-t=
+
+*** E05-02-A — Résultat attendu
+- Critère :: Les états à gauche de | sont ouverts ; DONE/CANCELED sont fermés et les touches sélectionnent les états.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-02-B — Résultat attendu
+- Critère :: Chaque rubrique appartient à une séquence explicite et C-c C-c recharge les mots-clés.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-02-C — Résultat attendu
+- Critère :: Le périmètre de chaque méthode est correctement distingué.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 5.3 — Progress Logging
+Commande(s) de référence : =C-u C-c C-t ; org-log-done ; org-log-into-drawer ; état !/@=
+
+*** E05-03-A — Résultat attendu
+- Critère :: Un événement de fin horodaté est enregistré uniquement si configuré.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-03-B — Résultat attendu
+- Critère :: WAIT demande une note ; DONE trace un horodatage ; les événements sont dans LOGBOOK si activé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-03-C — Résultat attendu
+- Critère :: La transition est documentée et sa date dépend de l’exécution réelle.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 5.4 — Priorities
+Commande(s) de référence : =C-c , ; S-UP/DOWN=
+
+*** E05-04-A — Résultat attendu
+- Critère :: Les cookies [#A], [#B], [#C] sont syntaxiquement corrects, absence de cookie = priorité B par défaut.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-04-B — Résultat attendu
+- Critère :: La priorité influe sur l’agenda, non sur l’état de réalisation.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 5.5 — Breaking Tasks Down into Subtasks
+Commande(s) de référence : =[/] ; [%] ; C-c C-c=
+
+*** E05-05-A — Résultat attendu
+- Critère :: Les compteurs reflètent exactement le nombre et le pourcentage de sous-tâches terminées.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-05-B — Résultat attendu
+- Critère :: Le résultat est 2/4 et 50 % (si les quatre enfants directs sont les tâches comptées).
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 5.6 — Checkboxes
+Commande(s) de référence : =- [ ] ; - [X] ; - [-] ; C-c C-c ; C-u C-c C-c=
+
+*** E05-06-A — Résultat attendu
+- Critère :: Avec une partie des filles cochées, la mère est intermédiaire [-].
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E05-06-B — Résultat attendu
+- Critère :: Le compteur se met à jour et les checkboxes ne figurent pas dans la liste globale des TODO.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+TODO: TODO(t) WAIT(w@) REVIEW(r) | DONE(d!) CANCELED(c@)
+* TODO [#A] Préparer une campagne [50%]
+** DONE Vérifier la sécurité
+** DONE Vérifier le protocole
+** TODO Vérifier le capteur
+** TODO Valider le montage
+* TODO Liste du jour [1/2]
+- [X] Préparer le cahier
+- [ ] Vérifier les câbles
+#+END_EXAMPLE

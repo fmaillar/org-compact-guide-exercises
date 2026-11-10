@@ -1,0 +1,145 @@
+#+TITLE: 10 — Agenda Views · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 10
+
+* 10 — Agenda Views
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/10-agenda-views.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/10-agenda-views.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 10.1 — Agenda Files
+Raccourcis et notions : =org-agenda-files ; C-c [ ; C-c ] ; C-' ; C-,=
+
+*** E10-01-A — Exercice pratique
+- Consigne :: Enregistrer deux ateliers parmi les fichiers d’agenda puis vérifier la liste actuelle.
+- Validation :: org-agenda-files ne contient que les fichiers attendus.
+- Suivi :: Cocher E10-01-A dans le fichier PROGRESSION.org.
+
+*** E10-01-B — Exercice pratique
+- Consigne :: Retirer puis réinsérer un fichier d’agenda et parcourir la liste.
+- Validation :: L’effet de C-c [, C-c ] et C-'/C-, est observé sans supprimer les fichiers du disque.
+- Suivi :: Cocher E10-01-B dans le fichier PROGRESSION.org.
+
+** 10.2 — The Agenda Dispatcher
+Raccourcis et notions : =C-c a ; a ; t/T ; m/M ; s=
+
+*** E10-02-A — Exercice pratique
+- Consigne :: Ouvrir le dispatcher et lancer successivement agenda, TODO, recherche de tags et recherche textuelle.
+- Validation :: Les vues apparaissent et restent liées aux mêmes fichiers sources.
+- Suivi :: Cocher E10-02-A dans le fichier PROGRESSION.org.
+
+*** E10-02-B — Exercice pratique
+- Consigne :: Distinguer t/T et m/M sur des données contenant à la fois tâches et notes.
+- Validation :: La sélection par état n’est pas confondue avec celle des tags.
+- Suivi :: Cocher E10-02-B dans le fichier PROGRESSION.org.
+
+** 10.3 — The Weekly/Daily Agenda
+Raccourcis et notions : =org-agenda a ; diary ; org-agenda-to-appt=
+
+*** E10-03-A — Exercice pratique
+- Consigne :: Afficher la semaine d’un événement récurrent et vérifier ses dates d’apparition.
+- Validation :: La tâche est visible aux dates prévues et la navigation temporelle fonctionne.
+- Suivi :: Cocher E10-03-A dans le fichier PROGRESSION.org.
+
+*** E10-03-B — Exercice pratique
+- Consigne :: Ajouter une expression de calendrier pour un anniversaire et noter la propriété CATEGORY.
+- Validation :: L’expression diary est reconnue et catégorisée dans l’agenda.
+- Suivi :: Cocher E10-03-B dans le fichier PROGRESSION.org.
+
+*** E10-03-C — Exercice pratique
+- Consigne :: Tester org-agenda-to-appt dans une session temporaire.
+- Validation :: Les événements peuvent alimenter les notifications Emacs sans modifier les notifications système.
+- Suivi :: Cocher E10-03-C dans le fichier PROGRESSION.org.
+
+** 10.4 — The Global TODO List
+Raccourcis et notions : =org-agenda t ; org-agenda T ; t depuis la vue=
+
+*** E10-04-A — Exercice pratique
+- Consigne :: Lister les TODO ouverts provenant d’au moins deux ateliers.
+- Validation :: Les DONE sont exclus de la vue des travaux restant à faire.
+- Suivi :: Cocher E10-04-A dans le fichier PROGRESSION.org.
+
+*** E10-04-B — Exercice pratique
+- Consigne :: Filtrer par état WAIT puis modifier une tâche depuis le buffer agenda.
+- Validation :: La modification est reflétée dans le fichier source après rafraîchissement.
+- Suivi :: Cocher E10-04-B dans le fichier PROGRESSION.org.
+
+** 10.5 — Matching Tags and Properties
+Raccourcis et notions : =org-agenda m/M ; C-c / m ; + - & | ; PROPERTY OP VALUE=
+
+*** E10-05-A — Exercice pratique
+- Consigne :: Rechercher « travail|maison+urgent » et expliquer la priorité des opérateurs.
+- Validation :: Le ET contraint davantage que le OU ; la sélection est conforme au jeu de données.
+- Suivi :: Cocher E10-05-A dans le fichier PROGRESSION.org.
+
+*** E10-05-B — Exercice pratique
+- Consigne :: Chercher une propriété « Responsable » égale à « Ada » puis combiner avec un tag.
+- Validation :: La vue choisit les entrées de la valeur demandée ; une requête de propriété mal formée est corrigée.
+- Suivi :: Cocher E10-05-B dans le fichier PROGRESSION.org.
+
+*** E10-05-C — Exercice pratique
+- Consigne :: Comparer les résultats m et M (limitation aux TODO).
+- Validation :: M ne retient que les titres porteurs d’un état TODO ouvert.
+- Suivi :: Cocher E10-05-C dans le fichier PROGRESSION.org.
+
+** 10.6 — Search View
+Raccourcis et notions : =org-agenda s ; mots ; + - {regexp}=
+
+*** E10-06-A — Exercice pratique
+- Consigne :: Rechercher les notes contenant « capteur » sans consulter de titre à la main.
+- Validation :: La recherche retrouve une occurrence dans le corps de la note.
+- Suivi :: Cocher E10-06-A dans le fichier PROGRESSION.org.
+
+*** E10-06-B — Exercice pratique
+- Consigne :: Composer une expression avec deux mots requis et un mot exclu, puis ajouter une regexp entre accolades.
+- Validation :: Les quatre contraintes sont visibles dans les résultats.
+- Suivi :: Cocher E10-06-B dans le fichier PROGRESSION.org.
+
+** 10.7 — Commands in the Agenda Buffer
+Raccourcis et notions : =n/p ; SPC/TAB/RET ; o ; d/w ; f/b ; ./j ; l ; g/r/s ; 0..9 ; t ; C-k ; C-c C-w ; a/$ ; C-c C-s/d ; S-LEFT/RIGHT ; I/O/X/J ; q/x=
+
+*** E10-07-A — Exercice pratique
+- Consigne :: Depuis une vue agenda, se déplacer n/p, afficher l’origine SPC, ouvrir avec TAB puis revenir.
+- Validation :: La source exacte est retrouvée ; les buffers originaux ne sont pas altérés par la navigation.
+- Suivi :: Cocher E10-07-A dans le fichier PROGRESSION.org.
+
+*** E10-07-B — Exercice pratique
+- Consigne :: Alterner jour/semaine, avancer/reculer la période, revenir à aujourd’hui et aller à une date précise.
+- Validation :: La plage temporelle change sans toucher aux timestamps des tâches.
+- Suivi :: Cocher E10-07-B dans le fichier PROGRESSION.org.
+
+*** E10-07-C — Exercice pratique
+- Consigne :: Modifier un TODO, une programmation et une échéance depuis l’agenda, puis actualiser/sauver.
+- Validation :: Les mutations sont inscrites dans les fichiers Org, et g/r actualise la vue.
+- Suivi :: Cocher E10-07-C dans le fichier PROGRESSION.org.
+
+*** E10-07-D — Exercice pratique
+- Consigne :: Chronométrer depuis l’agenda et voir logbook ; tester quitter q et sortir x.
+- Validation :: I, O, X, J et l ont le comportement attendu ; différence q/x comprise.
+- Suivi :: Cocher E10-07-D dans le fichier PROGRESSION.org.
+
+*** E10-07-E — Exercice pratique
+- Consigne :: Sur une copie jetable seulement, découvrir refile, archivage et suppression C-k.
+- Validation :: Une suppression dans l’agenda agit sur l’arbre source : les données importantes ne servent jamais de banc d’essai.
+- Suivi :: Cocher E10-07-E dans le fichier PROGRESSION.org.
+
+** 10.8 — Custom Agenda Views
+Raccourcis et notions : =org-agenda-custom-commands ; C depuis le dispatcher=
+
+*** E10-08-A — Exercice pratique
+- Consigne :: Configurer un raccourci « w » pour les éléments WAIT, un « u » pour un tag et un « v » pour les TODO de ce tag.
+- Validation :: Les trois commandes personnalisées répondent à des périmètres différents.
+- Suivi :: Cocher E10-08-A dans le fichier PROGRESSION.org.
+
+*** E10-08-B — Exercice pratique
+- Consigne :: Tester les mêmes recherches comme vue agenda et, lorsque pertinent, comme arbre clairsemé.
+- Validation :: La différence portée globale / portée du buffer courant est documentée.
+- Suivi :: Cocher E10-08-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

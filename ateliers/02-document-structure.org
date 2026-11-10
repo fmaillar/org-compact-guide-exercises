@@ -1,0 +1,21 @@
+#+TITLE: Atelier 02 — Document Structure
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+STARTUP: content
+* Projet laboratoire
+** Conception
+*** Membrane
+Une membrane doit rester hydratée.
+*** Assemblage
+Note sur le montage des cellules.
+** Essais
+*** Essai à vide
+Le capteur de membrane est prêt.
+*** Essai en charge
+Mesure de membrane et courant.
+* Références
+** Notes bibliographiques
+Liste à créer ici.
+* Archivage personnel
+Les notes de l’expérience doivent rester intactes lors des déplacements.

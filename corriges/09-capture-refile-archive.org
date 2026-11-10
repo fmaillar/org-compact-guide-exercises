@@ -1,0 +1,77 @@
+#+TITLE: 09 — Capture, Refile, Archive · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 9
+Énoncés : [[file:../exercices/09-capture-refile-archive.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 9.1 — Capture
+Commande(s) de référence : =org-default-notes-file ; C-c c ; C-c C-c ; C-c C-k ; C-c C-w=
+
+*** E09-01-A — Résultat attendu
+- Critère :: Une note a été écrite dans ateliers/09-capture-refile-archive.org sans interrompre le flux.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E09-01-B — Résultat attendu
+- Critère :: La note annulée n’est pas créée ; la note reclassée existe à la destination choisie.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E09-01-C — Résultat attendu
+- Critère :: Les codes %?, %U, %i et %a sont reconnus ; distinguer date active et inactive.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 9.2 — Refile and Copy
+Commande(s) de référence : =C-c C-w ; C-u C-c C-w ; C-u C-u C-c C-w ; C-c M-w=
+
+*** E09-02-A — Résultat attendu
+- Critère :: La note ne figure plus à la source et reste intacte à la destination.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E09-02-B — Résultat attendu
+- Critère :: La note reste à la source ET apparaît dans le projet de destination.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E09-02-C — Résultat attendu
+- Critère :: La liste de cibles inclut les bonnes rubriques, pas tous les titres du disque.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 9.3 — Archiving
+Commande(s) de référence : =C-c C-x C-a ; C-c C-x C-s ; C-c $ ; #+ARCHIVE=
+
+*** E09-03-A — Résultat attendu
+- Critère :: La tâche disparaît des travaux actifs et se retrouve dans le fichier d’archive.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E09-03-B — Résultat attendu
+- Critère :: La nouvelle destination est distincte de celle par défaut.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E09-03-C — Résultat attendu
+- Critère :: Préciser la limite du guide compact et noter où trouver les commandes d’attachements dans le manuel complet.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+* Boîte de réception
+** TODO Note à déplacer
+* Projet A
+** TODO Note déplacée
+* Tâches capturées
+* Journal
+
+# Une archive créée peut être nommée *archive* par Org.
+#+END_EXAMPLE

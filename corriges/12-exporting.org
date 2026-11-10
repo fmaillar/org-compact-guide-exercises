@@ -1,0 +1,154 @@
+#+TITLE: 12 — Exporting · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 12
+Énoncés : [[file:../exercices/12-exporting.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 12.1 — The Export Dispatcher
+Commande(s) de référence : =C-c C-e ; région active ; export de buffer=
+
+*** E12-01-A — Résultat attendu
+- Critère :: Les formats sont ceux réellement disponibles dans la version Org installée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-01-B — Résultat attendu
+- Critère :: Le contenu exporté diffère selon la sélection ; aucun export destructeur n’écrase une source.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.2 — Export Settings
+Commande(s) de référence : =#+TITLE ; #+AUTHOR ; #+DATE ; #+EMAIL ; #+LANGUAGE ; # dans le dispatcher=
+
+*** E12-02-A — Résultat attendu
+- Critère :: Le titre, l’auteur fictif, la langue et la date sont transmis au document généré.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-02-B — Résultat attendu
+- Critère :: Une option par fichier est préférée à un changement global inutile.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.3 — Table of Contents
+Commande(s) de référence : =#+OPTIONS: toc:2 ; toc:nil ; org-export-with-toc=
+
+*** E12-03-A — Résultat attendu
+- Critère :: La table des matières contient au plus deux niveaux dans le premier cas et disparaît dans le second.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-03-B — Résultat attendu
+- Critère :: Le choix local est limité au document courant.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.4 — Include Files
+Commande(s) de référence : =#+INCLUDE: ; src ; example ; export ; C-c '=
+
+*** E12-04-A — Résultat attendu
+- Critère :: Le texte inclus apparaît une seule fois dans l’export.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-04-B — Résultat attendu
+- Critère :: Le bloc inclus conserve le type de contenu demandé ; C-c ' permet de visiter la cible.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.5 — Comment Lines
+Commande(s) de référence : =# commentaire ; #+BEGIN_COMMENT ; COMMENT ; C-c ;=
+
+*** E12-05-A — Résultat attendu
+- Critère :: La remarque et le bloc sont absents du rendu.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-05-B — Résultat attendu
+- Critère :: Le sous-arbre COMMENT est exclu, y compris ses descendants.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.6 — ASCII/UTF-8 Export
+Commande(s) de référence : =C-c C-e t a ; C-c C-e t u=
+
+*** E12-06-A — Résultat attendu
+- Critère :: Les deux fichiers .txt existent dans un répertoire d’essai et n’exposent pas les marqueurs Org.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-06-B — Résultat attendu
+- Critère :: Le traitement des caractères non ASCII est identifié plutôt que supposé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.7 — HTML Export
+Commande(s) de référence : =C-c C-e h h ; h o ; @@html:...@@ ; #+HTML ; #+BEGIN_EXPORT html=
+
+*** E12-07-A — Résultat attendu
+- Critère :: Le document .html est valide et les entités < et > sont échappées dans le texte ordinaire.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-07-B — Résultat attendu
+- Critère :: Le HTML brut n’apparaît que dans la sortie HTML, avec une provenance de confiance.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.8 — LaTeX Export
+Commande(s) de référence : =C-c C-e l l ; l p ; l o ; #+LATEX_CLASS ; @@latex:...@@ ; #+LATEX ; #+BEGIN_EXPORT latex=
+
+*** E12-08-A — Résultat attendu
+- Critère :: Le fichier contient la classe attendue, les titres, les formules et une table des matières si activée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-08-B — Résultat attendu
+- Critère :: Le PDF est créé sans modifier le fichier .org ; sinon l’étape est documentée comme facultative.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-08-C — Résultat attendu
+- Critère :: Le rendu LaTeX inclut les fragments bruts ; un autre backend n’est pas censé les interpréter.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 12.9 — iCalendar Export
+Commande(s) de référence : =C-c C-e c f ; C-c C-e c c ; org-icalendar-combined-agenda-file=
+
+*** E12-09-A — Résultat attendu
+- Critère :: Un fichier .ics existe et comporte au moins un événement lisible par un lecteur iCalendar.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E12-09-B — Résultat attendu
+- Critère :: Le résultat agrège les événements des fichiers configurés ; vérifier le chemin de sortie.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+TITLE: Rapport de validation
+#+AUTHOR: Équipe pédagogique
+#+DATE: 2027-02-03
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+* Résultats
+Consulter le [[file:../assets/encart.org][texte complémentaire]].
+#+INCLUDE: "../assets/encart.org" example
+
+# Cette ligne ne sera pas exportée.
+
+#+BEGIN_COMMENT
+Ce bloc ne doit pas apparaître dans le document.
+#+END_COMMENT
+
+* Conclusion
+Vérifier les exports HTML, LaTeX et ICS.
+#+END_EXAMPLE

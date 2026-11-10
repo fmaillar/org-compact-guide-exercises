@@ -1,0 +1,65 @@
+#+TITLE: 13 — Publishing · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 13
+Énoncés : [[file:../exercices/13-publishing.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 13 · Projet — Configuration d’un projet de publication
+Commande(s) de référence : =org-publish-project-alist ; :base-directory ; :publishing-directory ; :publishing-function=
+
+*** E13-01-A — Résultat attendu
+- Critère :: Le répertoire d’entrée et celui de sortie sont différents ; aucune publication réseau.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E13-01-B — Résultat attendu
+- Critère :: Les ressources statiques sont accessibles depuis les pages exportées.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E13-01-C — Résultat attendu
+- Critère :: Une éventuelle publication réseau nécessiterait un choix et une configuration explicites de la cible.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E13-01-D — Résultat attendu
+- Critère :: Les deux liens fonctionnent depuis exports/site/ en dehors d’Emacs.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 13 · Commandes — Publication incrémentale et forcée
+Commande(s) de référence : =C-c C-e P x/p/f/a ; argument préfixe=
+
+*** E13-02-A — Résultat attendu
+- Critère :: Le périmètre varie avec f, p et a/x ; les bons fichiers sont générés.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E13-02-B — Résultat attendu
+- Critère :: Org utilise des informations de modification ; le forçage régénère même si rien n’a changé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+(setq org-publish-project-alist
+      '(("cours-html"
+         :base-directory "/chemin/absolu/ateliers/site/"
+         :base-extension "org"
+         :publishing-directory "/chemin/absolu/exports/site/"
+         :publishing-function org-html-publish-to-html)
+        ("cours-assets"
+         :base-directory "/chemin/absolu/assets/"
+         :base-extension "css\|svg"
+         :publishing-directory "/chemin/absolu/exports/site/"
+         :publishing-function org-publish-attachment)
+        ("cours" :components ("cours-html" "cours-assets"))))
+
+# Le setup/init.el fournit une configuration équivalente et portable.
+#+END_EXAMPLE

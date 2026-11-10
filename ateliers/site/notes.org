@@ -1,0 +1,7 @@
+#+TITLE: Notes de terrain
+#+LANGUAGE: fr
+#+HTML_HEAD: <link rel="stylesheet" href="site.css" type="text/css" />
+* Notes de terrain
+Ce fichier sert à vérifier la publication de plusieurs pages.
+
+Retour à [[file:accueil.org][la page d’accueil]].

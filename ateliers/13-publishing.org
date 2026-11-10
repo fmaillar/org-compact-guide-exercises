@@ -1,0 +1,10 @@
+#+TITLE: Atelier 13 — Publishing
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+* Objectif
+Publier un mini-site statique depuis des fichiers Org sans utiliser de serveur.
+* Questions de validation
+- Où sont les sources ?
+- Où sont les fichiers générés ?
+- Comment forcer une recompilation ?

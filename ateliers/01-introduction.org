@@ -1,0 +1,17 @@
+#+TITLE: Atelier 01 — Introduction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+* Environnement local
+- Version Emacs : à relever
+- Version Org : à relever
+- Mode majeur du fichier : à vérifier
+- Installation externe requise ? : à justifier
+* Prise en main
+- Raccourci org-store-link :
+- Raccourci org-agenda :
+- Raccourci org-capture :
+* Rapport de bogue fictif
+- Étapes reproductibles :
+- Comportement attendu :
+- Comportement observé :

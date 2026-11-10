@@ -1,0 +1,88 @@
+#+TITLE: 08 — Dates and Times · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 8
+
+* 8 — Dates and Times
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/08-dates-and-times.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/08-dates-and-times.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 8.1 — Timestamps
+Raccourcis et notions : =<...> ; [...] ; +1w ; -- ; %%(diary-...)=
+
+*** E08-01-A — Exercice pratique
+- Consigne :: Insérer un rendez-vous actif, une date de prise de note inactive et un événement avec heures de début et fin.
+- Validation :: Les formes <...> et [...] sont distinctes ; seuls les événements actifs remontent dans l’agenda.
+- Suivi :: Cocher E08-01-A dans le fichier PROGRESSION.org.
+
+*** E08-01-B — Exercice pratique
+- Consigne :: Créer une réunion couvrant trois jours avec deux timestamps séparés par --.
+- Validation :: L’intervalle se propage sur les trois jours de la vue agenda.
+- Suivi :: Cocher E08-01-B dans le fichier PROGRESSION.org.
+
+*** E08-01-C — Exercice pratique
+- Consigne :: Créer une occurrence répétée (+1w) et une date d’expression diary pour le deuxième jeudi du mois.
+- Validation :: La syntaxe de répétition et celle de diary sont correctement distinguées.
+- Suivi :: Cocher E08-01-C dans le fichier PROGRESSION.org.
+
+** 8.2 — Creating Timestamps
+Raccourcis et notions : =C-c . ; C-c ! ; S-LEFT/RIGHT ; S-UP/DOWN=
+
+*** E08-02-A — Exercice pratique
+- Consigne :: Insérer une date active et une inactive avec les raccourcis, puis modifier une date existante.
+- Validation :: La commande réédite l’horodatage situé au point au lieu d’en créer un doublon.
+- Suivi :: Cocher E08-02-A dans le fichier PROGRESSION.org.
+
+*** E08-02-B — Exercice pratique
+- Consigne :: Créer un intervalle d’heures, déplacer la date d’un jour puis modifier son heure de début.
+- Validation :: L’intervalle garde sa durée lorsque l’heure de début est déplacée.
+- Suivi :: Cocher E08-02-B dans le fichier PROGRESSION.org.
+
+*** E08-02-C — Exercice pratique
+- Consigne :: Comparer la saisie en langage naturel du prompt de date et le sélecteur calendrier.
+- Validation :: Le timestamp inséré est valide quel que soit le format saisi dans le minibuffer.
+- Suivi :: Cocher E08-02-C dans le fichier PROGRESSION.org.
+
+** 8.3 — Deadlines and Scheduling
+Raccourcis et notions : =C-c C-d ; C-c C-s ; DEADLINE ; SCHEDULED=
+
+*** E08-03-A — Exercice pratique
+- Consigne :: Sur deux tâches distinctes, fixer la date de début planifiée et la date limite.
+- Validation :: SCHEDULED et DEADLINE ne sont pas synonymes ; la première indique un travail prévu, la seconde une échéance.
+- Suivi :: Cocher E08-03-A dans le fichier PROGRESSION.org.
+
+*** E08-03-B — Exercice pratique
+- Consigne :: Insérer un rendez-vous sans DEADLINE/SCHEDULED puis comparer les trois entrées d’agenda.
+- Validation :: Le rendez-vous est un timestamp simple, contrairement à une action planifiée.
+- Suivi :: Cocher E08-03-B dans le fichier PROGRESSION.org.
+
+*** E08-03-C — Exercice pratique
+- Consigne :: Configurer une échéance récurrente (+1m) et examiner l’avertissement d’approche dans l’agenda.
+- Validation :: Le répétiteur est sur le timestamp actif ; l’anticipation dépend de org-deadline-warning-days.
+- Suivi :: Cocher E08-03-C dans le fichier PROGRESSION.org.
+
+** 8.4 — Clocking Work Time
+Raccourcis et notions : =C-c C-x C-i/o/e/q/j ; agenda l=
+
+*** E08-04-A — Exercice pratique
+- Consigne :: Démarrer et arrêter un chronomètre de tâche, puis examiner la ligne CLOCK produite.
+- Validation :: Une plage horaire et un total de temps sont enregistrés sans calcul manuel.
+- Suivi :: Cocher E08-04-A dans le fichier PROGRESSION.org.
+
+*** E08-04-B — Exercice pratique
+- Consigne :: Définir une estimation EFFORT, rejoindre la tâche chronométrée puis annuler un essai de chronométrage.
+- Validation :: L’estimation est distincte du temps réel ; le clock annulé n’est pas comptabilisé.
+- Suivi :: Cocher E08-04-B dans le fichier PROGRESSION.org.
+
+*** E08-04-C — Exercice pratique
+- Consigne :: Afficher le journal quotidien dans la vue agenda avec l et sélectionner une ancienne tâche à chronométrer.
+- Validation :: L’historique et le travail chronométré sont visualisables dans l’agenda.
+- Suivi :: Cocher E08-04-C dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

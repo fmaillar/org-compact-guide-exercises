@@ -1,0 +1,153 @@
+#+TITLE: 10 — Agenda Views · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 10
+Énoncés : [[file:../exercices/10-agenda-views.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 10.1 — Agenda Files
+Commande(s) de référence : =org-agenda-files ; C-c [ ; C-c ] ; C-' ; C-,=
+
+*** E10-01-A — Résultat attendu
+- Critère :: org-agenda-files ne contient que les fichiers attendus.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-01-B — Résultat attendu
+- Critère :: L’effet de C-c [, C-c ] et C-'/C-, est observé sans supprimer les fichiers du disque.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.2 — The Agenda Dispatcher
+Commande(s) de référence : =C-c a ; a ; t/T ; m/M ; s=
+
+*** E10-02-A — Résultat attendu
+- Critère :: Les vues apparaissent et restent liées aux mêmes fichiers sources.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-02-B — Résultat attendu
+- Critère :: La sélection par état n’est pas confondue avec celle des tags.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.3 — The Weekly/Daily Agenda
+Commande(s) de référence : =org-agenda a ; diary ; org-agenda-to-appt=
+
+*** E10-03-A — Résultat attendu
+- Critère :: La tâche est visible aux dates prévues et la navigation temporelle fonctionne.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-03-B — Résultat attendu
+- Critère :: L’expression diary est reconnue et catégorisée dans l’agenda.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-03-C — Résultat attendu
+- Critère :: Les événements peuvent alimenter les notifications Emacs sans modifier les notifications système.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.4 — The Global TODO List
+Commande(s) de référence : =org-agenda t ; org-agenda T ; t depuis la vue=
+
+*** E10-04-A — Résultat attendu
+- Critère :: Les DONE sont exclus de la vue des travaux restant à faire.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-04-B — Résultat attendu
+- Critère :: La modification est reflétée dans le fichier source après rafraîchissement.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.5 — Matching Tags and Properties
+Commande(s) de référence : =org-agenda m/M ; C-c / m ; + - & | ; PROPERTY OP VALUE=
+
+*** E10-05-A — Résultat attendu
+- Critère :: Le ET contraint davantage que le OU ; la sélection est conforme au jeu de données.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-05-B — Résultat attendu
+- Critère :: La vue choisit les entrées de la valeur demandée ; une requête de propriété mal formée est corrigée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-05-C — Résultat attendu
+- Critère :: M ne retient que les titres porteurs d’un état TODO ouvert.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.6 — Search View
+Commande(s) de référence : =org-agenda s ; mots ; + - {regexp}=
+
+*** E10-06-A — Résultat attendu
+- Critère :: La recherche retrouve une occurrence dans le corps de la note.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-06-B — Résultat attendu
+- Critère :: Les quatre contraintes sont visibles dans les résultats.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.7 — Commands in the Agenda Buffer
+Commande(s) de référence : =n/p ; SPC/TAB/RET ; o ; d/w ; f/b ; ./j ; l ; g/r/s ; 0..9 ; t ; C-k ; C-c C-w ; a/$ ; C-c C-s/d ; S-LEFT/RIGHT ; I/O/X/J ; q/x=
+
+*** E10-07-A — Résultat attendu
+- Critère :: La source exacte est retrouvée ; les buffers originaux ne sont pas altérés par la navigation.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-07-B — Résultat attendu
+- Critère :: La plage temporelle change sans toucher aux timestamps des tâches.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-07-C — Résultat attendu
+- Critère :: Les mutations sont inscrites dans les fichiers Org, et g/r actualise la vue.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-07-D — Résultat attendu
+- Critère :: I, O, X, J et l ont le comportement attendu ; différence q/x comprise.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-07-E — Résultat attendu
+- Critère :: Une suppression dans l’agenda agit sur l’arbre source : les données importantes ne servent jamais de banc d’essai.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 10.8 — Custom Agenda Views
+Commande(s) de référence : =org-agenda-custom-commands ; C depuis le dispatcher=
+
+*** E10-08-A — Résultat attendu
+- Critère :: Les trois commandes personnalisées répondent à des périmètres différents.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E10-08-B — Résultat attendu
+- Critère :: La différence portée globale / portée du buffer courant est documentée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+#+TODO: TODO WAIT | DONE
+* TODO [#A] Calibrer :travail:urgent:
+SCHEDULED: <2027-02-03 Wed>
+:PROPERTIES:
+:Responsable: Ada
+:END:
+
+# Recherche : travail|maison+urgent
+# Depuis l’agenda : t, S-LEFT/RIGHT, l, g, C-c C-w
+#+END_EXAMPLE

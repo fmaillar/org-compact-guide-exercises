@@ -1,0 +1,18 @@
+#+TITLE: Atelier 04 — Hyperlinks
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+* Sommaire des recherches
+Ajouter ici les liens vers les sections et vers un fichier du dépôt.
+* Concepts
+:PROPERTIES:
+:CUSTOM_ID: concepts
+:END:
+Définition du rendement.
+* Glossaire
+<<rendement>> Rapport entre puissance utile et puissance reçue.
+* Liste des destinations
+| Protocole | Exemple | Disponible localement ? |
+|-----------+---------+------------------------|
+* Historique
+Revenir à cette rubrique après avoir suivi un lien interne.

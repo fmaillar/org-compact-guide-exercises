@@ -1,0 +1,55 @@
+#+TITLE: 15 — Miscellaneous · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 15
+
+* 15 — Miscellaneous
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/15-miscellaneous.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/15-miscellaneous.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 15 · Complétion — Complétion contextuelle
+Raccourcis et notions : =M-TAB ; TODO ; :tag: ; \alpha=
+
+*** E15-01-A — Exercice pratique
+- Consigne :: Tester la complétion sur un mot-clé TODO incomplet, un tag et une séquence de symbole TeX.
+- Validation :: La complétion dépend du contexte ; si M-TAB est intercepté, utiliser M-x completion-at-point.
+- Suivi :: Cocher E15-01-A dans le fichier PROGRESSION.org.
+
+*** E15-01-B — Exercice pratique
+- Consigne :: Identifier un cas où la complétion ne propose rien et examiner les réglages pertinents.
+- Validation :: L’absence de proposition n’est pas interprétée comme une corruption du fichier.
+- Suivi :: Cocher E15-01-B dans le fichier PROGRESSION.org.
+
+** 15 · Templates — Modèles de structure
+Raccourcis et notions : =C-c C-, ; region active=
+
+*** E15-02-A — Exercice pratique
+- Consigne :: Insérer un bloc SRC via le sélecteur de structure, puis un bloc QUOTE.
+- Validation :: Les délimiteurs ouvrants et fermants sont correctement appariés.
+- Suivi :: Cocher E15-02-A dans le fichier PROGRESSION.org.
+
+*** E15-02-B — Exercice pratique
+- Consigne :: Sélectionner plusieurs lignes puis les envelopper dans un bloc EXAMPLE.
+- Validation :: Tout le texte est dans le bloc, sans perte de contenu.
+- Suivi :: Cocher E15-02-B dans le fichier PROGRESSION.org.
+
+** 15 · Vue — Vue indente et présentation des étoiles
+Raccourcis et notions : =M-x org-indent-mode ; #+STARTUP: indent ; hidestars odd=
+
+*** E15-03-A — Exercice pratique
+- Consigne :: Comparer la présentation brute des titres et l’affichage dynamique avec org-indent-mode.
+- Validation :: L’option dynamique n’insère pas d’espaces matériels dans les lignes du fichier.
+- Suivi :: Cocher E15-03-A dans le fichier PROGRESSION.org.
+
+*** E15-03-B — Exercice pratique
+- Consigne :: Comparer #+STARTUP: indent et #+STARTUP: hidestars odd sur une copie.
+- Validation :: Le rendu et les octets du fichier sont distingués ; l’option de démarrage est locale.
+- Suivi :: Cocher E15-03-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

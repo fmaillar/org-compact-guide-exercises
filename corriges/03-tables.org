@@ -1,0 +1,71 @@
+#+TITLE: 03 — Tables · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 3
+Énoncés : [[file:../exercices/03-tables.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 3 · Création — Création et conversion
+Commande(s) de référence : =C-c | ; C-c RET ; TAB=
+
+*** E03-01-A — Résultat attendu
+- Critère :: Les trois colonnes sont alignées ; une ligne de données est ajoutable avec TAB.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E03-01-B — Résultat attendu
+- Critère :: Une vraie table Org apparaît ; la conversion de région utilise les virgules du CSV.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E03-01-C — Résultat attendu
+- Critère :: Les deux méthodes produisent une structure éditable.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 3 · Alignement — Alignement et déplacement des champs
+Commande(s) de référence : =TAB ; S-TAB ; RET ; C-c C-c ; S-flèches=
+
+*** E03-02-A — Résultat attendu
+- Critère :: L’alignement est cohérent et le contenu n’est pas tronqué.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E03-02-B — Résultat attendu
+- Critère :: Les cellules et les lignes restent correctement structurées.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 3 · Édition — Colonnes, lignes et tri
+Commande(s) de référence : =M-LEFT/RIGHT ; M-S-LEFT/RIGHT ; M-UP/DOWN ; M-S-UP/DOWN ; C-c - ; C-c ^=
+
+*** E03-03-A — Résultat attendu
+- Critère :: La table contient à la fin les champs voulus dans le bon ordre.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E03-03-B — Résultat attendu
+- Critère :: Les valeurs sont ordonnées dans la section ciblée, sans déplacer la ligne d’en-tête.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E03-03-C — Résultat attendu
+- Critère :: Les raccourcis de suppression sont compris et les données originales restent récupérables.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+| Essai | Tension (V) | Courant (A) |
+|-------+-------------+-------------|
+| A     |        0.82 |           6 |
+| B     |        0.74 |          12 |
+| C     |        0.69 |          18 |
+
+# Raccourcis : C-c |, C-c C-c, C-c ^
+#+END_EXAMPLE

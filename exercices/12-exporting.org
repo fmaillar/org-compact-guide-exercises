@@ -1,0 +1,138 @@
+#+TITLE: 12 — Exporting · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 12
+
+* 12 — Exporting
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/12-exporting.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/12-exporting.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 12.1 — The Export Dispatcher
+Raccourcis et notions : =C-c C-e ; région active ; export de buffer=
+
+*** E12-01-A — Exercice pratique
+- Consigne :: Dans un atelier de publication, déclencher l’export via le dispatcher et identifier les formats proposés.
+- Validation :: Les formats sont ceux réellement disponibles dans la version Org installée.
+- Suivi :: Cocher E12-01-A dans le fichier PROGRESSION.org.
+
+*** E12-01-B — Exercice pratique
+- Consigne :: Exporter une région active puis tout le buffer dans deux essais distincts.
+- Validation :: Le contenu exporté diffère selon la sélection ; aucun export destructeur n’écrase une source.
+- Suivi :: Cocher E12-01-B dans le fichier PROGRESSION.org.
+
+** 12.2 — Export Settings
+Raccourcis et notions : =#+TITLE ; #+AUTHOR ; #+DATE ; #+EMAIL ; #+LANGUAGE ; # dans le dispatcher=
+
+*** E12-02-A — Exercice pratique
+- Consigne :: Définir les cinq métadonnées dans le fichier d’atelier puis exporter en HTML.
+- Validation :: Le titre, l’auteur fictif, la langue et la date sont transmis au document généré.
+- Suivi :: Cocher E12-02-A dans le fichier PROGRESSION.org.
+
+*** E12-02-B — Exercice pratique
+- Consigne :: Insérer un gabarit d’options depuis le dispatcher puis ne garder que les réglages utiles.
+- Validation :: Une option par fichier est préférée à un changement global inutile.
+- Suivi :: Cocher E12-02-B dans le fichier PROGRESSION.org.
+
+** 12.3 — Table of Contents
+Raccourcis et notions : =#+OPTIONS: toc:2 ; toc:nil ; org-export-with-toc=
+
+*** E12-03-A — Exercice pratique
+- Consigne :: Exporter un document hiérarchique avec toc:2 puis toc:nil.
+- Validation :: La table des matières contient au plus deux niveaux dans le premier cas et disparaît dans le second.
+- Suivi :: Cocher E12-03-A dans le fichier PROGRESSION.org.
+
+*** E12-03-B — Exercice pratique
+- Consigne :: Comparer la variable globale et la directive locale.
+- Validation :: Le choix local est limité au document courant.
+- Suivi :: Cocher E12-03-B dans le fichier PROGRESSION.org.
+
+** 12.4 — Include Files
+Raccourcis et notions : =#+INCLUDE: ; src ; example ; export ; C-c '=
+
+*** E12-04-A — Exercice pratique
+- Consigne :: Inclure le fichier de notes fourni dans un rapport, puis exporter.
+- Validation :: Le texte inclus apparaît une seule fois dans l’export.
+- Suivi :: Cocher E12-04-A dans le fichier PROGRESSION.org.
+
+*** E12-04-B — Exercice pratique
+- Consigne :: Inclure une source Python en mode src python ou un fichier texte en mode example.
+- Validation :: Le bloc inclus conserve le type de contenu demandé ; C-c ' permet de visiter la cible.
+- Suivi :: Cocher E12-04-B dans le fichier PROGRESSION.org.
+
+** 12.5 — Comment Lines
+Raccourcis et notions : =# commentaire ; #+BEGIN_COMMENT ; COMMENT ; C-c ;=
+
+*** E12-05-A — Exercice pratique
+- Consigne :: Placer une remarque « # » et un bloc COMMENT, puis exporter sans ces éléments.
+- Validation :: La remarque et le bloc sont absents du rendu.
+- Suivi :: Cocher E12-05-A dans le fichier PROGRESSION.org.
+
+*** E12-05-B — Exercice pratique
+- Consigne :: Commenter un sous-arbre entier avec C-c ; et comparer à un TODO ordinaire.
+- Validation :: Le sous-arbre COMMENT est exclu, y compris ses descendants.
+- Suivi :: Cocher E12-05-B dans le fichier PROGRESSION.org.
+
+** 12.6 — ASCII/UTF-8 Export
+Raccourcis et notions : =C-c C-e t a ; C-c C-e t u=
+
+*** E12-06-A — Exercice pratique
+- Consigne :: Exporter le rapport dans un fichier texte ASCII, puis en UTF-8.
+- Validation :: Les deux fichiers .txt existent dans un répertoire d’essai et n’exposent pas les marqueurs Org.
+- Suivi :: Cocher E12-06-A dans le fichier PROGRESSION.org.
+
+*** E12-06-B — Exercice pratique
+- Consigne :: Comparer les accents et symboles des deux exports.
+- Validation :: Le traitement des caractères non ASCII est identifié plutôt que supposé.
+- Suivi :: Cocher E12-06-B dans le fichier PROGRESSION.org.
+
+** 12.7 — HTML Export
+Raccourcis et notions : =C-c C-e h h ; h o ; @@html:...@@ ; #+HTML ; #+BEGIN_EXPORT html=
+
+*** E12-07-A — Exercice pratique
+- Consigne :: Exporter le rapport en HTML, puis l’ouvrir via l’option d’export appropriée.
+- Validation :: Le document .html est valide et les entités < et > sont échappées dans le texte ordinaire.
+- Suivi :: Cocher E12-07-A dans le fichier PROGRESSION.org.
+
+*** E12-07-B — Exercice pratique
+- Consigne :: Ajouter un court fragment HTML brut et un bloc d’export HTML sur une copie.
+- Validation :: Le HTML brut n’apparaît que dans la sortie HTML, avec une provenance de confiance.
+- Suivi :: Cocher E12-07-B dans le fichier PROGRESSION.org.
+
+** 12.8 — LaTeX Export
+Raccourcis et notions : =C-c C-e l l ; l p ; l o ; #+LATEX_CLASS ; @@latex:...@@ ; #+LATEX ; #+BEGIN_EXPORT latex=
+
+*** E12-08-A — Exercice pratique
+- Consigne :: Générer le fichier .tex depuis le rapport, sans nécessiter de chaîne TeX pour cette étape.
+- Validation :: Le fichier contient la classe attendue, les titres, les formules et une table des matières si activée.
+- Suivi :: Cocher E12-08-A dans le fichier PROGRESSION.org.
+
+*** E12-08-B — Exercice pratique
+- Consigne :: Si LaTeX est installé, produire un PDF et tester son ouverture.
+- Validation :: Le PDF est créé sans modifier le fichier .org ; sinon l’étape est documentée comme facultative.
+- Suivi :: Cocher E12-08-B dans le fichier PROGRESSION.org.
+
+*** E12-08-C — Exercice pratique
+- Consigne :: Insérer du LaTeX brut en ligne, par mot-clé et par bloc, puis identifier les limites de portabilité.
+- Validation :: Le rendu LaTeX inclut les fragments bruts ; un autre backend n’est pas censé les interpréter.
+- Suivi :: Cocher E12-08-C dans le fichier PROGRESSION.org.
+
+** 12.9 — iCalendar Export
+Raccourcis et notions : =C-c C-e c f ; C-c C-e c c ; org-icalendar-combined-agenda-file=
+
+*** E12-09-A — Exercice pratique
+- Consigne :: Exporter un rendez-vous depuis un atelier contenant un timestamp actif.
+- Validation :: Un fichier .ics existe et comporte au moins un événement lisible par un lecteur iCalendar.
+- Suivi :: Cocher E12-09-A dans le fichier PROGRESSION.org.
+
+*** E12-09-B — Exercice pratique
+- Consigne :: Combiner les fichiers d’agenda vers exports/agenda.ics et comparer au fichier individuel.
+- Validation :: Le résultat agrège les événements des fichiers configurés ; vérifier le chemin de sortie.
+- Suivi :: Cocher E12-09-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

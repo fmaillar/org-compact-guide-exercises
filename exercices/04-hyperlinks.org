@@ -1,0 +1,55 @@
+#+TITLE: 04 — Hyperlinks · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 4
+
+* 4 — Hyperlinks
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/04-hyperlinks.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/04-hyperlinks.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 4 · Internes — Liens internes
+Raccourcis et notions : =[[#CUSTOM_ID]] ; <<cible>> ; [[cible]] ; C-c C-o=
+
+*** E04-01-A — Exercice pratique
+- Consigne :: Créer un titre doté d’un CUSTOM_ID, puis un lien [[#...]] vers ce titre.
+- Validation :: C-c C-o atteint le titre identifié, même après changement de son libellé.
+- Suivi :: Cocher E04-01-A dans le fichier PROGRESSION.org.
+
+*** E04-01-B — Exercice pratique
+- Consigne :: Créer la cible <<glossaire>> et un lien de recherche dans le fichier, puis revenir au point initial.
+- Validation :: Le lien saute au repère ; C-c & exploite l’historique de marques.
+- Suivi :: Cocher E04-01-B dans le fichier PROGRESSION.org.
+
+** 4 · Externes — Liens externes et protocoles
+Raccourcis et notions : =file: ; https: ; mailto: ; info: ; id: ; docview:=
+
+*** E04-02-A — Exercice pratique
+- Consigne :: Ajouter un lien HTTPS, un lien relatif vers un autre fichier Org et un lien Info vers le manuel.
+- Validation :: Les trois destinations utilisent une syntaxe Org correcte ; tester seulement les destinations disponibles.
+- Suivi :: Cocher E04-02-A dans le fichier PROGRESSION.org.
+
+*** E04-02-B — Exercice pratique
+- Consigne :: Documenter les classes de liens du guide : fichier + ::ligne/recherche, id, docview, news, mailto, mhe, rmail, gnus, bbdb, irc et info.
+- Validation :: Une table d’inventaire indique type, destination et éventuelle application supplémentaire requise.
+- Suivi :: Cocher E04-02-B dans le fichier PROGRESSION.org.
+
+** 4 · Manipulation — Création et suivi des liens
+Raccourcis et notions : =C-c l ; C-c C-l ; C-u C-c C-l ; C-c C-o ; C-c & ; C-c %=
+
+*** E04-03-A — Exercice pratique
+- Consigne :: Stocker un lien vers une rubrique puis l’insérer avec description via C-c C-l ; modifier son texte ensuite.
+- Validation :: Le lien reste actif et sa description change sans casser la destination.
+- Suivi :: Cocher E04-03-A dans le fichier PROGRESSION.org.
+
+*** E04-03-B — Exercice pratique
+- Consigne :: Créer un lien vers un fichier en utilisant l’argument préfixe, l’ouvrir puis revenir via l’anneau de marques.
+- Validation :: Le parcours aller-retour fonctionne ; la cible est relative et portable.
+- Suivi :: Cocher E04-03-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

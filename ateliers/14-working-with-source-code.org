@@ -1,0 +1,21 @@
+#+TITLE: Atelier 14 — Working with Source Code
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+PROPERTY: header-args:emacs-lisp :results value :exports both
+* Évaluation sûre
+#+NAME: calcul-simple
+#+BEGIN_SRC emacs-lisp :var n=7 :results value
+(* n n)
+#+END_SRC
+* Résultats imprimés
+#+BEGIN_SRC emacs-lisp :results output
+(princ "test de mesure")
+#+END_SRC
+* Code à extraire
+#+BEGIN_SRC python :eval never :tangle ../exports/calcul.py
+def aire_disque(rayon: float) -> float:
+    return 3.141592653589793 * rayon**2
+#+END_SRC
+* Remarques
+Ne pas évaluer un bloc Python sans lecture préalable de son contenu.

@@ -1,0 +1,72 @@
+#+TITLE: 01 — Introduction · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 1
+Énoncés : [[file:../exercices/01-introduction.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 1 · Installation — Installation et version
+Commande(s) de référence : =M-x org-version ; M-x org-mode ; M-x describe-variable=
+
+*** E01-01-A — Résultat attendu
+- Critère :: Inscrire la valeur retournée par org-version dans l’atelier, sans inventer de numéro.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E01-01-B — Résultat attendu
+- Critère :: Une distribution Org incluse dans Emacs n’exige pas de réinstallation ; aucune modification de configuration système.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E01-01-C — Résultat attendu
+- Critère :: Le mode majeur affiché est Org et M-x org-mode fonctionne.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 1 · Activation — Activation et commandes globales
+Commande(s) de référence : =C-c l ; C-c a ; C-c c ; C-h k=
+
+*** E01-02-A — Résultat attendu
+- Critère :: Les touches C-c l, C-c a, C-c c invoquent respectivement org-store-link, org-agenda, org-capture.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E01-02-B — Résultat attendu
+- Critère :: Aucun fichier de configuration personnel n’a été modifié par ce TP.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E01-02-C — Résultat attendu
+- Critère :: La fonction et son mode de définition sont identifiés.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 1 · Feedback — Documentation et retours
+Commande(s) de référence : =C-h m ; C-h f ; C-h v ; C-h i=
+
+*** E01-03-A — Résultat attendu
+- Critère :: Indiquer au moins un chemin vers la documentation locale, l’URL officielle et le canal de signalement.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E01-03-B — Résultat attendu
+- Critère :: Un exemple de rapport ne contient aucune donnée privée ni information d’identification.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+M-x org-version
+M-x org-mode
+C-h k C-c a
+
+;; Configuration isolée d’exemple :
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
+#+END_EXAMPLE

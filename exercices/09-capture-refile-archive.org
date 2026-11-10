@@ -1,0 +1,70 @@
+#+TITLE: 09 — Capture, Refile, Archive · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 9
+
+* 9 — Capture, Refile, Archive
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/09-capture-refile-archive.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/09-capture-refile-archive.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 9.1 — Capture
+Raccourcis et notions : =org-default-notes-file ; C-c c ; C-c C-c ; C-c C-k ; C-c C-w=
+
+*** E09-01-A — Exercice pratique
+- Consigne :: Définir une destination de notes et capturer une idée, puis finaliser.
+- Validation :: Une note a été écrite dans ateliers/09-capture-refile-archive.org sans interrompre le flux.
+- Suivi :: Cocher E09-01-A dans le fichier PROGRESSION.org.
+
+*** E09-01-B — Exercice pratique
+- Consigne :: Tester une capture annulée avec C-c C-k, puis une capture finalisée avec déplacement.
+- Validation :: La note annulée n’est pas créée ; la note reclassée existe à la destination choisie.
+- Suivi :: Cocher E09-01-B dans le fichier PROGRESSION.org.
+
+*** E09-01-C — Exercice pratique
+- Consigne :: Configurer deux modèles de capture : tâche vers un titre « Tâches capturées » et journal daté.
+- Validation :: Les codes %?, %U, %i et %a sont reconnus ; distinguer date active et inactive.
+- Suivi :: Cocher E09-01-C dans le fichier PROGRESSION.org.
+
+** 9.2 — Refile and Copy
+Raccourcis et notions : =C-c C-w ; C-u C-c C-w ; C-u C-u C-c C-w ; C-c M-w=
+
+*** E09-02-A — Exercice pratique
+- Consigne :: Déplacer une note du dossier « Boîte de réception » vers « Projet A ».
+- Validation :: La note ne figure plus à la source et reste intacte à la destination.
+- Suivi :: Cocher E09-02-A dans le fichier PROGRESSION.org.
+
+*** E09-02-B — Exercice pratique
+- Consigne :: Copier une autre note avec C-c M-w et comparer au déplacement.
+- Validation :: La note reste à la source ET apparaît dans le projet de destination.
+- Suivi :: Cocher E09-02-B dans le fichier PROGRESSION.org.
+
+*** E09-02-C — Exercice pratique
+- Consigne :: Configurer les cibles de refile entre deux fichiers, puis naviguer vers le dernier emplacement reclassé.
+- Validation :: La liste de cibles inclut les bonnes rubriques, pas tous les titres du disque.
+- Suivi :: Cocher E09-02-C dans le fichier PROGRESSION.org.
+
+** 9.3 — Archiving
+Raccourcis et notions : =C-c C-x C-a ; C-c C-x C-s ; C-c $ ; #+ARCHIVE=
+
+*** E09-03-A — Exercice pratique
+- Consigne :: Archiver une tâche terminée et vérifier la destination *_archive.
+- Validation :: La tâche disparaît des travaux actifs et se retrouve dans le fichier d’archive.
+- Suivi :: Cocher E09-03-A dans le fichier PROGRESSION.org.
+
+*** E09-03-B — Exercice pratique
+- Consigne :: Tester une localisation personnalisée via #+ARCHIVE: %s_done:: sur copie.
+- Validation :: La nouvelle destination est distincte de celle par défaut.
+- Suivi :: Cocher E09-03-B dans le fichier PROGRESSION.org.
+
+*** E09-03-C — Exercice pratique
+- Consigne :: Lire la documentation des pièces jointes Org, évoquées sans détail de commande dans l’introduction du chapitre.
+- Validation :: Préciser la limite du guide compact et noter où trouver les commandes d’attachements dans le manuel complet.
+- Suivi :: Cocher E09-03-C dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

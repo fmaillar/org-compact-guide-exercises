@@ -1,0 +1,91 @@
+#+TITLE: 14 — Working with Source Code · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 14
+
+* 14 — Working with Source Code
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/14-working-with-source-code.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/14-working-with-source-code.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 14 · Blocs — Structure d’un bloc et édition
+Raccourcis et notions : =#+NAME ; #+BEGIN_SRC langage ; #+END_SRC ; C-c '=
+
+*** E14-01-A — Exercice pratique
+- Consigne :: Nommer un bloc emacs-lisp de calcul numérique et l’éditer dans son mode majeur avec C-c '.
+- Validation :: Le bloc est correctement délimité ; l’édition spécialisée ne casse pas le document.
+- Suivi :: Cocher E14-01-A dans le fichier PROGRESSION.org.
+
+*** E14-01-B — Exercice pratique
+- Consigne :: Ajouter un bloc Python non évalué pour comparaison et expliquer les prérequis d’un langage externe.
+- Validation :: Le choix de langage et la politique d’exécution sont explicites.
+- Suivi :: Cocher E14-01-B dans le fichier PROGRESSION.org.
+
+** 14 · Arguments — Arguments d’en-tête et portée
+Raccourcis et notions : =:results ; :exports ; :var ; #+HEADER ; :PROPERTIES: :header-args:=
+
+*** E14-02-A — Exercice pratique
+- Consigne :: Passer une valeur :var n=7 au bloc et utiliser au moins un argument sur #+HEADER.
+- Validation :: Le résultat du bloc dépend de la variable fournie et les arguments locaux sont prioritaires.
+- Suivi :: Cocher E14-02-A dans le fichier PROGRESSION.org.
+
+*** E14-02-B — Exercice pratique
+- Consigne :: Définir :header-args: dans les propriétés d’une rubrique puis surcharger localement un bloc.
+- Validation :: La différence entre configuration globale, propriétés de sous-arbre et arguments du bloc est observable.
+- Suivi :: Cocher E14-02-B dans le fichier PROGRESSION.org.
+
+** 14 · Évaluation — Évaluation et transmission de données
+Raccourcis et notions : =C-c C-c ; org-babel ; :var ; #+RESULTS=
+
+*** E14-03-A — Exercice pratique
+- Consigne :: Évaluer une expression emacs-lisp sans effet de bord et vérifier #+RESULTS.
+- Validation :: Le calcul arithmétique donne la valeur attendue sans accès au réseau ni au système de fichiers.
+- Suivi :: Cocher E14-03-A dans le fichier PROGRESSION.org.
+
+*** E14-03-B — Exercice pratique
+- Consigne :: Transmettre une valeur littérale puis un tableau nommé comme variable à un bloc.
+- Validation :: Les entrées passent par :var et la sortie dépend des données transmises.
+- Suivi :: Cocher E14-03-B dans le fichier PROGRESSION.org.
+
+** 14 · Résultats — Collecte, type, format et export
+Raccourcis et notions : =:results value/output/table/list/scalar/file ; replace/append/silent ; :exports code/results/both/none=
+
+*** E14-04-A — Exercice pratique
+- Consigne :: Comparer :results value et :results output pour deux blocs comparables.
+- Validation :: Le premier recueille la valeur de retour, le second la sortie imprimée.
+- Suivi :: Cocher E14-04-A dans le fichier PROGRESSION.org.
+
+*** E14-04-B — Exercice pratique
+- Consigne :: Choisir un rendu liste ou tableau et examiner :results replace, append et silent.
+- Validation :: Le type/format et la politique de remplacement sont contrôlés.
+- Suivi :: Cocher E14-04-B dans le fichier PROGRESSION.org.
+
+*** E14-04-C — Exercice pratique
+- Consigne :: Tester :results file avec :file vers ../exports/ après vérification du code évalué.
+- Validation :: Un fichier de résultat est créé uniquement dans le dossier de sortie attendu et référencé depuis Org.
+- Suivi :: Cocher E14-04-C dans le fichier PROGRESSION.org.
+
+*** E14-04-D — Exercice pratique
+- Consigne :: Exporter successivement le code seul, le résultat seul, les deux et aucun.
+- Validation :: Les quatre variantes de :exports sont constatées dans le HTML généré.
+- Suivi :: Cocher E14-04-D dans le fichier PROGRESSION.org.
+
+** 14 · Tangling — Extraction de code source
+Raccourcis et notions : =:tangle exports/calcul.py ; C-c C-v t ; noweb=
+
+*** E14-05-A — Exercice pratique
+- Consigne :: Écrire un petit module Python « aire_disque » dans un bloc :tangle exports/calcul.py.
+- Validation :: Le fichier Python apparaît à la destination définie sans exécution automatique.
+- Suivi :: Cocher E14-05-A dans le fichier PROGRESSION.org.
+
+*** E14-05-B — Exercice pratique
+- Consigne :: Ajouter une référence noweb simple, tangler de nouveau puis inspecter le fichier résultant.
+- Validation :: Le code expansé est cohérent et portable ; aucune commande externe dangereuse n’est lancée.
+- Suivi :: Cocher E14-05-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

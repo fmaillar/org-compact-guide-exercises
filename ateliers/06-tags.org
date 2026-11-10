@@ -1,0 +1,12 @@
+#+TITLE: Atelier 06 — Tags
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+TAGS: @bureau(b) @maison(m) laptop(l) urgent(u) travail(t) personnel(p)
+#+FILETAGS: :atelier:
+* Projet capteurs                                              :travail:
+** TODO Étalonner le capteur                                    :urgent:@bureau:
+** Documenter la mesure                                         :laptop:
+* Vie quotidienne                                              :personnel:
+** Acheter des pièces                                           :@maison:
+* Tâche à classer

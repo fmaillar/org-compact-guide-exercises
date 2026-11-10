@@ -1,0 +1,52 @@
+#+TITLE: 13 — Publishing · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 13
+
+* 13 — Publishing
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/13-publishing.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/13-publishing.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 13 · Projet — Configuration d’un projet de publication
+Raccourcis et notions : =org-publish-project-alist ; :base-directory ; :publishing-directory ; :publishing-function=
+
+*** E13-01-A — Exercice pratique
+- Consigne :: Configurer un projet HTML dont les deux fichiers source résident dans ateliers/site/.
+- Validation :: Le répertoire d’entrée et celui de sortie sont différents ; aucune publication réseau.
+- Suivi :: Cocher E13-01-A dans le fichier PROGRESSION.org.
+
+*** E13-01-B — Exercice pratique
+- Consigne :: Ajouter un second composant pour copier une feuille de style et une image, puis lier les deux projets.
+- Validation :: Les ressources statiques sont accessibles depuis les pages exportées.
+- Suivi :: Cocher E13-01-B dans le fichier PROGRESSION.org.
+
+*** E13-01-C — Exercice pratique
+- Consigne :: Expliquer comment le moteur de publication pourrait transférer le résultat sur un serveur, sans effectuer de mise en ligne dans cet atelier.
+- Validation :: Une éventuelle publication réseau nécessiterait un choix et une configuration explicites de la cible.
+- Suivi :: Cocher E13-01-C dans le fichier PROGRESSION.org.
+
+*** E13-01-D — Exercice pratique
+- Consigne :: Publier les deux pages puis vérifier la navigation relative entre elles.
+- Validation :: Les deux liens fonctionnent depuis exports/site/ en dehors d’Emacs.
+- Suivi :: Cocher E13-01-D dans le fichier PROGRESSION.org.
+
+** 13 · Commandes — Publication incrémentale et forcée
+Raccourcis et notions : =C-c C-e P x/p/f/a ; argument préfixe=
+
+*** E13-02-A — Exercice pratique
+- Consigne :: Comparer la publication d’un fichier, du projet courant et de tous les projets.
+- Validation :: Le périmètre varie avec f, p et a/x ; les bons fichiers sont générés.
+- Suivi :: Cocher E13-02-A dans le fichier PROGRESSION.org.
+
+*** E13-02-B — Exercice pratique
+- Consigne :: Modifier une seule source et relancer la publication incrémentale, puis forcer une recompilation.
+- Validation :: Org utilise des informations de modification ; le forçage régénère même si rien n’a changé.
+- Suivi :: Cocher E13-02-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

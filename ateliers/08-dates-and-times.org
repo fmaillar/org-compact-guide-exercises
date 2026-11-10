@@ -1,0 +1,14 @@
+#+TITLE: Atelier 08 — Dates and Times
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+* TODO Préparer le montage
+* TODO Lancer la mesure
+* Réunion avec le laboratoire
+<2027-02-03 Wed 10:00-11:30>
+* Date de prise de notes
+[2026-11-10 Tue]
+* Maintenance hebdomadaire
+<2027-02-03 Wed +1w>
+* Journal de temps
+Choisir un élément TODO pour faire un clock-in/clock-out.

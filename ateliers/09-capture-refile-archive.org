@@ -1,0 +1,12 @@
+#+TITLE: Atelier 09 — Capture, Refile, Archive
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+* Boîte de réception
+** TODO Question à trier
+** Référence à copier
+* Projet A
+* Projet B
+* Tâches capturées
+* Notes
+* Archives manuelles

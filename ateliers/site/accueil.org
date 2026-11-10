@@ -1,0 +1,7 @@
+#+TITLE: Accueil du mini-site
+#+LANGUAGE: fr
+#+HTML_HEAD: <link rel="stylesheet" href="site.css" type="text/css" />
+* Une page pour expérimenter la publication
+Ceci est un document original pour l’atelier Org.
+
+Consulter [[file:notes.org][les notes de terrain]].

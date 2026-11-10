@@ -1,0 +1,2 @@
+#+TITLE: Note complémentaire
+L’essai est reproductible si les unités, la date et la configuration sont consignées.

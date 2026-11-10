@@ -1,0 +1,17 @@
+#+TITLE: Atelier 11 — Markup for Rich Contents
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+* Observation
+Une grandeur physique change pendant l’expérience.
+
+Deuxième paragraphe à mettre en forme.
+* Équation
+Insérer ici le bilan énergétique et ses symboles.
+* Extrait de journal
+TEMP=42
+VOLT=0.75
+* Figure
+À compléter avec le fichier ../assets/figure.svg.
+* Source et note
+Cette conclusion demande une référence de bas de page.

@@ -1,0 +1,96 @@
+#+TITLE: 08 — Dates and Times · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 8
+Énoncés : [[file:../exercices/08-dates-and-times.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 8.1 — Timestamps
+Commande(s) de référence : =<...> ; [...] ; +1w ; -- ; %%(diary-...)=
+
+*** E08-01-A — Résultat attendu
+- Critère :: Les formes <...> et [...] sont distinctes ; seuls les événements actifs remontent dans l’agenda.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-01-B — Résultat attendu
+- Critère :: L’intervalle se propage sur les trois jours de la vue agenda.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-01-C — Résultat attendu
+- Critère :: La syntaxe de répétition et celle de diary sont correctement distinguées.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 8.2 — Creating Timestamps
+Commande(s) de référence : =C-c . ; C-c ! ; S-LEFT/RIGHT ; S-UP/DOWN=
+
+*** E08-02-A — Résultat attendu
+- Critère :: La commande réédite l’horodatage situé au point au lieu d’en créer un doublon.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-02-B — Résultat attendu
+- Critère :: L’intervalle garde sa durée lorsque l’heure de début est déplacée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-02-C — Résultat attendu
+- Critère :: Le timestamp inséré est valide quel que soit le format saisi dans le minibuffer.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 8.3 — Deadlines and Scheduling
+Commande(s) de référence : =C-c C-d ; C-c C-s ; DEADLINE ; SCHEDULED=
+
+*** E08-03-A — Résultat attendu
+- Critère :: SCHEDULED et DEADLINE ne sont pas synonymes ; la première indique un travail prévu, la seconde une échéance.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-03-B — Résultat attendu
+- Critère :: Le rendez-vous est un timestamp simple, contrairement à une action planifiée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-03-C — Résultat attendu
+- Critère :: Le répétiteur est sur le timestamp actif ; l’anticipation dépend de org-deadline-warning-days.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 8.4 — Clocking Work Time
+Commande(s) de référence : =C-c C-x C-i/o/e/q/j ; agenda l=
+
+*** E08-04-A — Résultat attendu
+- Critère :: Une plage horaire et un total de temps sont enregistrés sans calcul manuel.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-04-B — Résultat attendu
+- Critère :: L’estimation est distincte du temps réel ; le clock annulé n’est pas comptabilisé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E08-04-C — Résultat attendu
+- Critère :: L’historique et le travail chronométré sont visualisables dans l’agenda.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+* TODO Préparer le montage
+SCHEDULED: <2027-02-03 Wed>
+DEADLINE: <2027-02-05 Fri>
+* Réunion
+<2027-02-03 Wed 10:00-11:00>
+* Trace de modification
+[2026-11-10 Tue]
+* Maintenance récurrente
+<2027-02-03 Wed +1w>
+#+END_EXAMPLE

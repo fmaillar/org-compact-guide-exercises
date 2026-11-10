@@ -1,0 +1,104 @@
+#+TITLE: 02 — Document Structure · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 2
+
+* 2 — Document Structure
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/02-document-structure.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/02-document-structure.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 2.1 — Headlines
+Raccourcis et notions : =étoiles en début de ligne ; CUSTOM_ID ; org-footnote-section=
+
+*** E02-01-A — Exercice pratique
+- Consigne :: Dans l’atelier, construire trois niveaux de rubriques pour « Projet laboratoire » et y placer deux notes distinctes.
+- Validation :: Une étoile, deux étoiles puis trois étoiles correspondent aux trois niveaux ; les notes restent sous les bonnes branches.
+- Suivi :: Cocher E02-01-A dans le fichier PROGRESSION.org.
+
+*** E02-01-B — Exercice pratique
+- Consigne :: Créer une rubrique « Footnotes » et comparer sa présence dans le buffer et dans un export.
+- Validation :: Le sous-arbre spécial de notes de bas de page est ignoré lors de l’export ; conserver les notes métier sous un autre nom.
+- Suivi :: Cocher E02-01-B dans le fichier PROGRESSION.org.
+
+** 2.2 — Visibility Cycling
+Raccourcis et notions : =TAB ; S-TAB ; C-u TAB ; C-u C-u C-u TAB ; #+STARTUP=
+
+*** E02-02-A — Exercice pratique
+- Consigne :: À partir de trois niveaux, alterner FOLDED, CHILDREN et SUBTREE avec TAB sur un titre.
+- Validation :: Observer trois états locaux distincts sans supprimer le contenu.
+- Suivi :: Cocher E02-02-A dans le fichier PROGRESSION.org.
+
+*** E02-02-B — Exercice pratique
+- Consigne :: Cycler la visibilité globale puis afficher aussi les drawers ; tester #+STARTUP: content sur copie.
+- Validation :: Le document reprend l’état initial annoncé après réouverture ; les drawers peuvent être affichés explicitement.
+- Suivi :: Cocher E02-02-B dans le fichier PROGRESSION.org.
+
+** 2.3 — Motion
+Raccourcis et notions : =C-c C-n ; C-c C-p ; C-c C-f ; C-c C-b ; C-c C-u=
+
+*** E02-03-A — Exercice pratique
+- Consigne :: Depuis une feuille de niveau 3, atteindre le titre suivant, le précédent et le parent au clavier.
+- Validation :: Le déplacement suit la hiérarchie attendue sans rechercher manuellement au curseur.
+- Suivi :: Cocher E02-03-A dans le fichier PROGRESSION.org.
+
+*** E02-03-B — Exercice pratique
+- Consigne :: Comparer navigation « titre visible » et navigation « même niveau » sur l’arbre replié.
+- Validation :: Noter le déplacement effectif pour chacun des cinq raccourcis.
+- Suivi :: Cocher E02-03-B dans le fichier PROGRESSION.org.
+
+** 2.4 — Structure Editing
+Raccourcis et notions : =M-RET ; M-S-RET ; M-LEFT/RIGHT ; M-UP/DOWN ; C-x n s/w=
+
+*** E02-04-A — Exercice pratique
+- Consigne :: Ajouter une rubrique sœur, une tâche TODO et une sous-rubrique, puis permuter deux sous-arbres.
+- Validation :: Les notes filles accompagnent leur parent lors du déplacement ; hiérarchie préservée.
+- Suivi :: Cocher E02-04-A dans le fichier PROGRESSION.org.
+
+*** E02-04-B — Exercice pratique
+- Consigne :: Promouvoir/dégrader un titre et plusieurs titres dans une région active ; vérifier l’effet de TAB dans une entrée vide.
+- Validation :: Les niveaux changent comme prévu sans effacer de texte.
+- Suivi :: Cocher E02-04-B dans le fichier PROGRESSION.org.
+
+*** E02-04-C — Exercice pratique
+- Consigne :: Rétrécir à un sous-arbre avec C-x n s puis rétablir la vue avec C-x n w.
+- Validation :: Le contenu hors sous-arbre redevient visible après widen.
+- Suivi :: Cocher E02-04-C dans le fichier PROGRESSION.org.
+
+** 2.5 — Sparse Trees
+Raccourcis et notions : =C-c / ; C-c / r ; C-c C-c=
+
+*** E02-05-A — Exercice pratique
+- Consigne :: Chercher « membrane » par arbre clairsemé et vérifier que seuls les résultats et leurs ancêtres sont dépliés.
+- Validation :: La recherche ne modifie ni texte ni structure et surligne plusieurs occurrences.
+- Suivi :: Cocher E02-05-A dans le fichier PROGRESSION.org.
+
+*** E02-05-B — Exercice pratique
+- Consigne :: Refaire avec une expression régulière puis supprimer le surlignage via C-c C-c.
+- Validation :: Les correspondances de la regex sont repérées et le surlignage peut être effacé.
+- Suivi :: Cocher E02-05-B dans le fichier PROGRESSION.org.
+
+** 2.6 — Plain Lists
+Raccourcis et notions : =M-RET ; M-S-RET ; M-UP/DOWN ; M-LEFT/RIGHT ; C-c - ; C-c C-c=
+
+*** E02-06-A — Exercice pratique
+- Consigne :: Créer dans une note une liste à puces, une liste ordonnée et une liste de définitions avec « :: ».
+- Validation :: Les trois types sont reconnus, leurs niveaux d’indentation restent cohérents.
+- Suivi :: Cocher E02-06-A dans le fichier PROGRESSION.org.
+
+*** E02-06-B — Exercice pratique
+- Consigne :: Réordonner deux éléments numérotés, promouvoir un item et déplacer un item avec enfants.
+- Validation :: La numérotation se répare ; les enfants se déplacent avec l’item lorsque demandé.
+- Suivi :: Cocher E02-06-B dans le fichier PROGRESSION.org.
+
+*** E02-06-C — Exercice pratique
+- Consigne :: Cycler les types de puces et ajouter une case à cocher à un item avec M-S-RET.
+- Validation :: La case est manipulable par C-c C-c et n’est pas un état TODO de titre.
+- Suivi :: Cocher E02-06-C dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

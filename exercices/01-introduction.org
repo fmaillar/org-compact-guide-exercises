@@ -1,0 +1,65 @@
+#+TITLE: 01 — Introduction · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 1
+
+* 1 — Introduction
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/01-introduction.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/01-introduction.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 1 · Installation — Installation et version
+Raccourcis et notions : =M-x org-version ; M-x org-mode ; M-x describe-variable=
+
+*** E01-01-A — Exercice pratique
+- Consigne :: Depuis Emacs, relever la version réelle de Org et distinguer la version livrée avec Emacs d’une installation externe.
+- Validation :: Inscrire la valeur retournée par org-version dans l’atelier, sans inventer de numéro.
+- Suivi :: Cocher E01-01-A dans le fichier PROGRESSION.org.
+
+*** E01-01-B — Exercice pratique
+- Consigne :: Expliquer quand la procédure « ajout au load-path / make autoloads » du guide est nécessaire et quand elle doit être évitée.
+- Validation :: Une distribution Org incluse dans Emacs n’exige pas de réinstallation ; aucune modification de configuration système.
+- Suivi :: Cocher E01-01-B dans le fichier PROGRESSION.org.
+
+*** E01-01-C — Exercice pratique
+- Consigne :: Vérifier qu’un fichier *.org* ouvre org-mode, et documenter comment activer le mode manuellement.
+- Validation :: Le mode majeur affiché est Org et M-x org-mode fonctionne.
+- Suivi :: Cocher E01-01-C dans le fichier PROGRESSION.org.
+
+** 1 · Activation — Activation et commandes globales
+Raccourcis et notions : =C-c l ; C-c a ; C-c c ; C-h k=
+
+*** E01-02-A — Exercice pratique
+- Consigne :: Tester les trois commandes de lien, agenda et capture avec la configuration de ce dépôt.
+- Validation :: Les touches C-c l, C-c a, C-c c invoquent respectivement org-store-link, org-agenda, org-capture.
+- Suivi :: Cocher E01-02-A dans le fichier PROGRESSION.org.
+
+*** E01-02-B — Exercice pratique
+- Consigne :: Comparer une configuration isolée via emacs -Q -l setup/init.el à votre configuration habituelle.
+- Validation :: Aucun fichier de configuration personnel n’a été modifié par ce TP.
+- Suivi :: Cocher E01-02-B dans le fichier PROGRESSION.org.
+
+*** E01-02-C — Exercice pratique
+- Consigne :: Employer C-h k pour vérifier la commande associée à une touche plutôt que supposer qu’elle est libre.
+- Validation :: La fonction et son mode de définition sont identifiés.
+- Suivi :: Cocher E01-02-C dans le fichier PROGRESSION.org.
+
+** 1 · Feedback — Documentation et retours
+Raccourcis et notions : =C-h m ; C-h f ; C-h v ; C-h i=
+
+*** E01-03-A — Exercice pratique
+- Consigne :: Retrouver l’aide d’Org, sa documentation Info et l’adresse de la liste de diffusion officielle.
+- Validation :: Indiquer au moins un chemin vers la documentation locale, l’URL officielle et le canal de signalement.
+- Suivi :: Cocher E01-03-A dans le fichier PROGRESSION.org.
+
+*** E01-03-B — Exercice pratique
+- Consigne :: Décrire un rapport de bogue minimal reproductible : version, commande, entrée, comportement observé et attendu.
+- Validation :: Un exemple de rapport ne contient aucune donnée privée ni information d’identification.
+- Suivi :: Cocher E01-03-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

@@ -1,0 +1,63 @@
+#+TITLE: 04 — Hyperlinks · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 4
+Énoncés : [[file:../exercices/04-hyperlinks.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 4 · Internes — Liens internes
+Commande(s) de référence : =[[#CUSTOM_ID]] ; <<cible>> ; [[cible]] ; C-c C-o=
+
+*** E04-01-A — Résultat attendu
+- Critère :: C-c C-o atteint le titre identifié, même après changement de son libellé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E04-01-B — Résultat attendu
+- Critère :: Le lien saute au repère ; C-c & exploite l’historique de marques.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 4 · Externes — Liens externes et protocoles
+Commande(s) de référence : =file: ; https: ; mailto: ; info: ; id: ; docview:=
+
+*** E04-02-A — Résultat attendu
+- Critère :: Les trois destinations utilisent une syntaxe Org correcte ; tester seulement les destinations disponibles.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E04-02-B — Résultat attendu
+- Critère :: Une table d’inventaire indique type, destination et éventuelle application supplémentaire requise.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 4 · Manipulation — Création et suivi des liens
+Commande(s) de référence : =C-c l ; C-c C-l ; C-u C-c C-l ; C-c C-o ; C-c & ; C-c %=
+
+*** E04-03-A — Résultat attendu
+- Critère :: Le lien reste actif et sa description change sans casser la destination.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E04-03-B — Résultat attendu
+- Critère :: Le parcours aller-retour fonctionne ; la cible est relative et portable.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+* Concepts
+:PROPERTIES:
+:CUSTOM_ID: concepts
+:END:
+Le calcul est décrit sous <<rendement>>.
+
+Voir [[#concepts][les concepts]] et [[rendement][la définition]].
+Voir [[file:02-document-structure.org][la structure des notes]].
+Voir [[https://orgmode.org][la documentation officielle]].
+#+END_EXAMPLE

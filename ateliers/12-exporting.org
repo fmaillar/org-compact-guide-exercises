@@ -1,0 +1,21 @@
+#+TITLE: Atelier 12 — Exporting
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+TITLE: Rapport d’essai
+#+AUTHOR: Équipe de démonstration
+#+DATE: 2027-02-03
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+* Introduction
+Une présentation courte avec des accents et une unité : μmol.
+* Observations
+** Jeu de données
+| Essai | Rendement |
+|-------+-----------|
+| A     |      0.42 |
+| B     |      0.57 |
+** Pièce jointe
+Utiliser une directive INCLUDE vers ../assets/encart.org.
+* Conclusion
+Cette phrase peut être complétée par un renvoi.

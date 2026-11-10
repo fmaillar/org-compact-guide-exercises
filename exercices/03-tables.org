@@ -1,0 +1,65 @@
+#+TITLE: 03 — Tables · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 3
+
+* 3 — Tables
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/03-tables.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/03-tables.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 3 · Création — Création et conversion
+Raccourcis et notions : =C-c | ; C-c RET ; TAB=
+
+*** E03-01-A — Exercice pratique
+- Consigne :: Saisir une table de mesures à partir de « |Essai|Tension|Courant » et créer une séparation horizontale.
+- Validation :: Les trois colonnes sont alignées ; une ligne de données est ajoutable avec TAB.
+- Suivi :: Cocher E03-01-A dans le fichier PROGRESSION.org.
+
+*** E03-01-B — Exercice pratique
+- Consigne :: Dans le fichier CSV d’exemple, sélectionner trois lignes et lancer C-c | dans un atelier Org.
+- Validation :: Une vraie table Org apparaît ; la conversion de région utilise les virgules du CSV.
+- Suivi :: Cocher E03-01-B dans le fichier PROGRESSION.org.
+
+*** E03-01-C — Exercice pratique
+- Consigne :: Créer une table vide depuis C-c | sans région et comparer au démarrage par une ligne « | ».
+- Validation :: Les deux méthodes produisent une structure éditable.
+- Suivi :: Cocher E03-01-C dans le fichier PROGRESSION.org.
+
+** 3 · Alignement — Alignement et déplacement des champs
+Raccourcis et notions : =TAB ; S-TAB ; RET ; C-c C-c ; S-flèches=
+
+*** E03-02-A — Exercice pratique
+- Consigne :: Modifier une valeur longue et réaligner avec C-c C-c ; parcourir les champs avec TAB et S-TAB.
+- Validation :: L’alignement est cohérent et le contenu n’est pas tronqué.
+- Suivi :: Cocher E03-02-A dans le fichier PROGRESSION.org.
+
+*** E03-02-B — Exercice pratique
+- Consigne :: Insérer une nouvelle ligne avec RET et permuter deux cellules à l’aide des touches S-flèches.
+- Validation :: Les cellules et les lignes restent correctement structurées.
+- Suivi :: Cocher E03-02-B dans le fichier PROGRESSION.org.
+
+** 3 · Édition — Colonnes, lignes et tri
+Raccourcis et notions : =M-LEFT/RIGHT ; M-S-LEFT/RIGHT ; M-UP/DOWN ; M-S-UP/DOWN ; C-c - ; C-c ^=
+
+*** E03-03-A — Exercice pratique
+- Consigne :: Déplacer la colonne « Courant », ajouter puis retirer une colonne « Note » et déplacer une ligne.
+- Validation :: La table contient à la fin les champs voulus dans le bon ordre.
+- Suivi :: Cocher E03-03-A dans le fichier PROGRESSION.org.
+
+*** E03-03-B — Exercice pratique
+- Consigne :: Trier les essais par tension avec C-c ^ ; utiliser une ligne horizontale pour délimiter la plage du tri.
+- Validation :: Les valeurs sont ordonnées dans la section ciblée, sans déplacer la ligne d’en-tête.
+- Suivi :: Cocher E03-03-B dans le fichier PROGRESSION.org.
+
+*** E03-03-C — Exercice pratique
+- Consigne :: Tester séparément suppression/insertion de ligne et de séparation horizontale sur copie.
+- Validation :: Les raccourcis de suppression sont compris et les données originales restent récupérables.
+- Suivi :: Cocher E03-03-C dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

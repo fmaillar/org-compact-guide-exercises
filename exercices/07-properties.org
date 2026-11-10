@@ -1,0 +1,39 @@
+#+TITLE: 07 — Properties · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 7
+
+* 7 — Properties
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/07-properties.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/07-properties.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 7 — Propriétés et valeurs permises
+Raccourcis et notions : =:PROPERTIES: ; :END: ; _ALL ; #+PROPERTY ; C-c C-x p ; C-c C-c d=
+
+*** E07-01-A — Exercice pratique
+- Consigne :: À partir de la liste des expériences, ajouter les propriétés « Responsable », « Tension » et « Statut ».
+- Validation :: Chaque propriété est dans un drawer PROPERTIES fermé par :END:.
+- Suivi :: Cocher E07-01-A dans le fichier PROGRESSION.org.
+
+*** E07-01-B — Exercice pratique
+- Consigne :: Définir « Statut_ALL » avec valeurs planifie, mesure, valide et vérifier la sélection guidée.
+- Validation :: Les valeurs permises sont héritées, mais la propriété ordinaire ne devient pas automatiquement définie.
+- Suivi :: Cocher E07-01-B dans le fichier PROGRESSION.org.
+
+*** E07-01-C — Exercice pratique
+- Consigne :: Poser une propriété de fichier via #+PROPERTY et comparer son héritage à une propriété de titre.
+- Validation :: Le périmètre du réglage est explicite ; C-c C-x p sait mettre à jour la propriété.
+- Suivi :: Cocher E07-01-C dans le fichier PROGRESSION.org.
+
+*** E07-01-D — Exercice pratique
+- Consigne :: Supprimer une propriété et retrouver les tâches par sélection de propriétés.
+- Validation :: C-c C-c d retire la propriété voulue ; les recherches ne sélectionnent plus la valeur retirée.
+- Suivi :: Cocher E07-01-D dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

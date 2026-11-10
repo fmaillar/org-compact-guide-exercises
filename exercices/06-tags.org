@@ -1,0 +1,68 @@
+#+TITLE: 06 — Tags · Exercices
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+#+SUBTITLE: Org Mode Compact Guide, chapitre 6
+
+* 6 — Tags
+Référence : [[https://orgmode.org/orgguide.html][Org Mode Compact Guide]].
+Atelier : [[file:../ateliers/06-tags.org][ouvrir le fichier à modifier]].
+Corrigé : [[file:../corriges/06-tags.org][consulter après réalisation]].
+Les objectifs et critères sont originaux. Réaliser les opérations dans l’atelier,
+pas dans ce fichier d’énoncés. Les commandes ci-dessous suivent le guide officiel.
+
+** 6 · Héritage — Tags et héritage
+Raccourcis et notions : =:travail: ; #+FILETAGS:=
+
+*** E06-01-A — Exercice pratique
+- Consigne :: Ajouter :travail: au projet parent et :urgent: à un enfant ; inspecter les tags effectifs de l’enfant.
+- Validation :: L’enfant hérite de :travail: sans devoir le répéter dans son titre.
+- Suivi :: Cocher E06-01-A dans le fichier PROGRESSION.org.
+
+*** E06-01-B — Exercice pratique
+- Consigne :: Ajouter un tag de fichier avec #+FILETAGS: puis vérifier l’héritage global.
+- Validation :: Les entrées héritent du tag de fichier en plus des tags de branche.
+- Suivi :: Cocher E06-01-B dans le fichier PROGRESSION.org.
+
+** 6 · Saisie — Saisie et complétion des tags
+Raccourcis et notions : =C-c C-q ; C-c C-c ; M-TAB ; #+TAGS ; org-tag-alist=
+
+*** E06-02-A — Exercice pratique
+- Consigne :: Définir les tags locaux @bureau(b), @maison(m), laptop(l) avec #+TAGS.
+- Validation :: La sélection rapide propose les clés et n’introduit pas de doublons.
+- Suivi :: Cocher E06-02-A dans le fichier PROGRESSION.org.
+
+*** E06-02-B — Exercice pratique
+- Consigne :: Ajouter et retirer plusieurs tags avec C-c C-q ; comparer à la complétion M-TAB.
+- Validation :: Les tags sont à la fin du titre, encadrés par : et correctement espacés.
+- Suivi :: Cocher E06-02-B dans le fichier PROGRESSION.org.
+
+** 6 · Groupes — Tags de groupe
+Raccourcis et notions : =#+TAGS [ ] ; #+TAGS { } ; C-c C-x q=
+
+*** E06-03-A — Exercice pratique
+- Consigne :: Définir le groupe « Contexte » contenant @bureau et @maison, puis tester la recherche du groupe.
+- Validation :: Une recherche Contexte remonte les éléments marqués par les membres du groupe.
+- Suivi :: Cocher E06-03-A dans le fichier PROGRESSION.org.
+
+*** E06-03-B — Exercice pratique
+- Consigne :: Créer un groupe de tags mutuellement exclusifs et désactiver temporairement les groupes.
+- Validation :: L’effet des accolades et de C-c C-x q est observé sur les résultats.
+- Suivi :: Cocher E06-03-B dans le fichier PROGRESSION.org.
+
+** 6 · Recherche — Recherches booléennes de tags
+Raccourcis et notions : =C-c / m ; C-c \ ; M-x org-agenda m/M=
+
+*** E06-04-A — Exercice pratique
+- Consigne :: Chercher « +travail+urgent-personnel » sur un arbre clairsemé.
+- Validation :: Seules les rubriques satisfaisant la conjonction et l’exclusion sont retenues.
+- Suivi :: Cocher E06-04-A dans le fichier PROGRESSION.org.
+
+*** E06-04-B — Exercice pratique
+- Consigne :: Comparer une vue tous titres m à une vue TODO M et une expression OR.
+- Validation :: La restriction aux TODO et le | changent le périmètre des résultats.
+- Suivi :: Cocher E06-04-B dans le fichier PROGRESSION.org.
+
+* Bilan du chapitre
+- Ai-je testé les raccourcis dans Emacs plutôt que seulement lire la syntaxe ?
+- Puis-je reproduire les résultats sur un autre fichier sans recopier le corrigé ?
+- Quel comportement dépend de ma version ou configuration d’Org ?

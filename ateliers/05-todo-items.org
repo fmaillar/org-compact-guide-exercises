@@ -1,0 +1,17 @@
+#+TITLE: Atelier 05 — TODO Items
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+TODO: TODO(t) WAIT(w@) REVIEW(r) | DONE(d!) CANCELED(c@)
+#+STARTUP: logdone
+* TODO [#A] Préparer une campagne d’essais [0/4]
+** TODO Vérifier la sécurité
+** TODO Vérifier l’instrumentation
+** TODO Préparer le protocole
+** TODO Calibrer les capteurs
+* TODO [#B] Contacter le laboratoire
+* DONE Créer le dossier technique
+* Liste de vérification (distincte des TODO)
+- [ ] Ouvrir le cahier
+- [ ] Vérifier la source électrique
+- [ ] Noter la température

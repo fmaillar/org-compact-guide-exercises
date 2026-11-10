@@ -1,0 +1,21 @@
+#+TITLE: Atelier 07 — Properties
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+PROPERTY: Statut_ALL planifie mesure valide
+* Série d’expériences
+  :PROPERTIES:
+  :Responsable: Ada
+  :END:
+** Essai 001
+   :PROPERTIES:
+   :Tension: 0.79
+   :Statut: planifie
+   :END:
+** Essai 002
+   :PROPERTIES:
+   :Tension: 0.74
+   :Statut: mesure
+   :END:
+* Référentiel des propriétés
+Ajouter ici les réponses sur l’héritage et les valeurs permises.

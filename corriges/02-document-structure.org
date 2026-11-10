@@ -1,0 +1,115 @@
+#+TITLE: 02 — Document Structure · Repères de correction
+#+LANGUAGE: fr
+#+OPTIONS: toc:2 num:nil
+
+* Correction — chapitre 2
+Énoncés : [[file:../exercices/02-document-structure.org][retour aux exercices]].
+Les opérations interactives et horodatées ont plusieurs solutions valides ;
+les critères ci-dessous sont des invariants, pas des captures fictives.
+
+** 2.1 — Headlines
+Commande(s) de référence : =étoiles en début de ligne ; CUSTOM_ID ; org-footnote-section=
+
+*** E02-01-A — Résultat attendu
+- Critère :: Une étoile, deux étoiles puis trois étoiles correspondent aux trois niveaux ; les notes restent sous les bonnes branches.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-01-B — Résultat attendu
+- Critère :: Le sous-arbre spécial de notes de bas de page est ignoré lors de l’export ; conserver les notes métier sous un autre nom.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 2.2 — Visibility Cycling
+Commande(s) de référence : =TAB ; S-TAB ; C-u TAB ; C-u C-u C-u TAB ; #+STARTUP=
+
+*** E02-02-A — Résultat attendu
+- Critère :: Observer trois états locaux distincts sans supprimer le contenu.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-02-B — Résultat attendu
+- Critère :: Le document reprend l’état initial annoncé après réouverture ; les drawers peuvent être affichés explicitement.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 2.3 — Motion
+Commande(s) de référence : =C-c C-n ; C-c C-p ; C-c C-f ; C-c C-b ; C-c C-u=
+
+*** E02-03-A — Résultat attendu
+- Critère :: Le déplacement suit la hiérarchie attendue sans rechercher manuellement au curseur.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-03-B — Résultat attendu
+- Critère :: Noter le déplacement effectif pour chacun des cinq raccourcis.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 2.4 — Structure Editing
+Commande(s) de référence : =M-RET ; M-S-RET ; M-LEFT/RIGHT ; M-UP/DOWN ; C-x n s/w=
+
+*** E02-04-A — Résultat attendu
+- Critère :: Les notes filles accompagnent leur parent lors du déplacement ; hiérarchie préservée.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-04-B — Résultat attendu
+- Critère :: Les niveaux changent comme prévu sans effacer de texte.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-04-C — Résultat attendu
+- Critère :: Le contenu hors sous-arbre redevient visible après widen.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 2.5 — Sparse Trees
+Commande(s) de référence : =C-c / ; C-c / r ; C-c C-c=
+
+*** E02-05-A — Résultat attendu
+- Critère :: La recherche ne modifie ni texte ni structure et surligne plusieurs occurrences.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-05-B — Résultat attendu
+- Critère :: Les correspondances de la regex sont repérées et le surlignage peut être effacé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+** 2.6 — Plain Lists
+Commande(s) de référence : =M-RET ; M-S-RET ; M-UP/DOWN ; M-LEFT/RIGHT ; C-c - ; C-c C-c=
+
+*** E02-06-A — Résultat attendu
+- Critère :: Les trois types sont reconnus, leurs niveaux d’indentation restent cohérents.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-06-B — Résultat attendu
+- Critère :: La numérotation se répare ; les enfants se déplacent avec l’item lorsque demandé.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+*** E02-06-C — Résultat attendu
+- Critère :: La case est manipulable par C-c C-c et n’est pas un état TODO de titre.
+- Contrôle :: Reprendre l’action et vérifier dans le buffer source et,
+  si applicable, dans l’agenda ou le document exporté.
+
+* Exemple minimal autonome
+Le fragment suivant illustre la syntaxe utile, sans prétendre constituer
+l’unique solution ni modifier automatiquement les ateliers.
+
+#+BEGIN_EXAMPLE
+* Projet laboratoire
+** Essais
+*** Membrane
+Note sur une mesure de membrane.
+*** Instrumentation
+Note sur un capteur.
+
+* Matériel
+- Capteurs :: Contrôler l’étalonnage
+- Câbles :: Contrôler la continuité
+1. Vérifier les entrées
+2. Démarrer l’acquisition
+#+END_EXAMPLE

@@ -1,0 +1,25 @@
+#+TITLE: Atelier 10 — Agenda Views
+#+LANGUAGE: fr
+#+OPTIONS: toc:2
+
+#+TODO: TODO WAIT | DONE
+#+TAGS: travail personnel urgent bureau maison
+* TODO [#A] Calibrer le capteur :travail:urgent:
+SCHEDULED: <2027-02-03 Wed>
+:PROPERTIES:
+:Responsable: Ada
+:END:
+Il faut vérifier le capteur et l’enregistreur.
+* TODO Valider la membrane :travail:
+DEADLINE: <2027-02-05 Fri>
+:PROPERTIES:
+:Responsable: Lin
+:END:
+Les premiers résultats sont disponibles.
+* TODO Réunion de restitution :travail:bureau:
+<2027-02-04 Thu 15:00-16:00>
+* DONE Installer le banc :travail:
+* Note réseau :personnel:maison:
+Le capteur wifi répond, Ethernet non vérifié.
+* Anniversaire de l’équipe
+%%(org-anniversary 2020 2 4) Anniversaire de l’équipe (%d ans)
